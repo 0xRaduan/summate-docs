@@ -1,18 +1,22 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Summate",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/summate.png",
+    "light": "/logo/summate.png",
+    "href": "https://summate.io"
+  },
+  "modeToggle": {
+    "default": "dark"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#9F7AEA",
+    "light": "#D6BBFB",
+    "dark": "#6B46C1",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#6B46C1",
+      "to": "#D6BBFB"
     }
   },
   "topbarLinks": [
@@ -22,40 +26,36 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Inbox",
+    "url": "https://summate.io/inbox"
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "Useful Links",
+      "url": "useful-links"
     }
   ],
   "anchors": [
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "https://docs.summate.io"
     },
     {
       "name": "Community",
-      "icon": "slack",
+      "icon": "discord",
       "url": "https://mintlify.com/community"
     },
     {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "Roadmap",
+      "icon": "road",
+      "url": "https://summate.io/roadmap"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": [
-        "introduction",
-        "quickstart",
-        "development"
-      ]
+      "pages": ["introduction", "quickstart", "how-it-works"]
     },
     {
       "group": "Essentials",
@@ -69,23 +69,13 @@
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "group": "Useful Links",
+      "pages": ["useful-links/introduction"]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/summateio",
+    "linkedin": "https://www.linkedin.com/company/summate",
+    "discord": "https://discord.gg/summate"
   }
 }
