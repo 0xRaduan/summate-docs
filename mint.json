@@ -9,7 +9,7 @@
   "modeToggle": {
     "default": "dark"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "colors": {
     "primary": "#9F7AEA",
     "light": "#D6BBFB",
