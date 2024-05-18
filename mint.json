@@ -4,7 +4,7 @@
   "logo": {
     "dark": "/logo/dark.jpg",
     "light": "/logo/light.jpg",
-    "href": "https://summate.io"
+    "href": "https://docs.summate.io"
   },
   "modeToggle": {
     "default": "dark"
@@ -22,7 +22,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:support@summate.io"
     }
   ],
   "topbarCtaButton": {
