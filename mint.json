@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Summate",
   "logo": {
-    "dark": "/logo/summate.png",
-    "light": "/logo/summate.png",
+    "dark": "/logo/dark.jpg",
+    "light": "/logo/light.jpg",
     "href": "https://summate.io"
   },
   "modeToggle": {
@@ -44,7 +44,7 @@
     {
       "name": "Community",
       "icon": "discord",
-      "url": "https://mintlify.com/community"
+      "url": "https://summate.io/community"
     },
     {
       "name": "Roadmap",
