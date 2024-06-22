@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Summate",
+  "name": "Summate Docs",
   "logo": {
     "dark": "/logo/dark.jpg",
     "light": "/logo/light.jpg",
@@ -49,28 +49,42 @@
     {
       "name": "Roadmap",
       "icon": "road",
-      "url": "https://summate.io/roadmap"
+      "url": "https://summate.canny.io/feature-requests"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "how-it-works"]
+      "pages": ["introduction", "quickstart", "manifesto", "faq"]
     },
     {
       "group": "Essentials",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "essentials/managing-newsletters",
+        "essentials/other-sources",
+        "essentials/customizing-digests",
+        "essentials/auto-forwarding",
+        "essentials/settings"
+      ]
+    },
+    {
+      "group": "Integrations",
+      "pages": [
+        "integrations/available-integrations",
+        "integrations/readwise",
+        "integrations/substack",
+        "integrations/youtube",
+        "integrations/suggest"
       ]
     },
     {
       "group": "Useful Links",
-      "pages": ["useful-links/introduction"]
+      "pages": [
+        "useful-links/ai",
+        "useful-links/crypto",
+        "useful-links/marketing",
+        "useful-links/productivity"
+      ]
     }
   ],
   "footerSocials": {
