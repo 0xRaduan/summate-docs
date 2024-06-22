@@ -1,0 +1,9 @@
+export const TopNewslettersMDX = ({ newsletters }) => (
+  <ul>
+    {newsletters.map((newsletter) => (
+      <li key={newsletter.url}>
+        <a href={newsletter.url}>{newsletter.title}</a>
+      </li>
+    ))}
+  </ul>
+);

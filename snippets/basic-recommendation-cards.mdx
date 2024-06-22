@@ -1,0 +1,34 @@
+export const BasicRecommendationCards = () => {
+  return (
+    <CardGroup cols={2}>
+      <Card
+        title="Managing Newsletters"
+        icon="envelope"
+        href="/essentials/managing-newsletters"
+      >
+        Learn how to manage your newsletter subscriptions
+      </Card>
+      <Card
+        title="Customizing Digests"
+        icon="sliders"
+        href="/essentials/customizing-digests"
+      >
+        Automatically generate endpoints from an OpenAPI spec
+      </Card>
+      <Card
+        title="Available Integrations"
+        icon="link"
+        href="/integrations/available-integrations"
+      >
+        Learn about integrations that are available to you.
+      </Card>
+      <Card
+        title="Roadmap"
+        icon="road"
+        href="https://summate.io/roadmap?ref=docs.summate.io"
+      >
+        Provide your suggestions on what we should build next.
+      </Card>
+    </CardGroup>
+  );
+};
