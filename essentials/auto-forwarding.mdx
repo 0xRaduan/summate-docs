@@ -6,16 +6,153 @@ icon: "inbox-out"
 
 ## Overview
 
-Instead of subscribing to all newsletters manually again, you can set up auto-forwarding and send a copy of selected newsletters from your main inbox.
+Instead of subscribing to all newsletters manually again, you can set up auto-forwarding and send a copy of selected newsletters from your main inbox, automatically.
 
-The overall process typically takes about 5 minutes of time, and generally requires to:
+The overall process typically takes about 5 minutes of time, and generally requires two things:
 
 - add your `@inbox.summate.io` email to your approved forwarding addresses
 - setup filters to forward newsletters to your `@inbox.summate.io` email
 
 ## Step-by-step guide for Gmail
 
-🚧 Under construction 🚧
+### 1. Go to Gmail Settings
+
+<Frame>
+  <div className="flex flex-row gap-10">
+    <img
+      src="/images/auto-forwarding/step_1_1.png"
+      alt="Step 1 - go to gmail settings"
+      style={{ marginRight: "10px" }}
+    />
+    <img
+      src="/images/auto-forwarding/step_1_2.png"
+      alt="Step 1 - go to gmail settings"
+      style={{ marginLeft: "10px" }}
+    />
+  </div>
+</Frame>
+### 2. Navigate to 'Forwarding and POP/IMAP'
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/step_2.png"
+    alt="Step 2 - navigate to forwarding and POP/IMAP"
+  />
+</Frame>
+
+### 3. Add a new Forwarding Address
+
+<Warning>
+**Do NOT select the “Forward a copy of incoming mail to …” option!**
+
+Instead, setup filtering with forwarding([step 8 of the guide](/essentials/auto-forwarding#8-setting-up-filtering))
+
+**Otherwise, all of your emails will be forwarded to the summate inbox, and that can be annoying or compromising data to the LLMs which you do not want to compromise.**
+
+</Warning>
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/step_3.png"
+    alt="Step 3 - add a new forwarding address"
+  />
+</Frame>
+
+### 4. Enter your summate email inbox
+
+You should have created it during the onboarding. If you haven't please go to the [inbox page](https://summate.io/inbox) and do that.
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/step_4.png"
+    alt="Step 4 - enter your summate email inbox"
+  />
+</Frame>
+
+### 5. Authorize your request via Gmail
+
+You might need to verify that it’s you(go through 2FA process with Gmail).
+
+After that, Gmail will send a verification link to your [summate inbox](https://summate.io/inbox).
+
+### 6. Find an email for gmail verification
+
+You will receive an email to your summate address. Navigate to [your inbox](https://summate.io/inbox) and you will see a new sender in pending section. After you click on it, you will see something similar to the image below:
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/step_6.png"
+    alt="Step 6 - verify your summate address for gmail auto-forwarding"
+  />
+</Frame>
+
+### 7. Paste the verification link into your browser
+
+Once you open the email, you will see something similar to the screenshot below. You need to copy and paste the link provided there into your browser.
+It should be along the lines: `https://mail-settings.google.com/mail/...`
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/step_7.png"
+    alt="Step 7 - paste the verification link into your browser"
+  />
+</Frame>
+
+### 8. Setting up filtering
+
+Once your summate email address was approved for gmail forwarding, you can setup as much filters as you want and choose to auto-forward emails to your summate inbox as a setting on those filters.
+
+First, go to the “filters and blocked addresses” page.
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/step_8_1.png"
+    alt="Step 8 - go to the filters and blocked addresses page"
+  />
+</Frame>
+
+Then, create a new filter:
+
+For example a simple one to catch all emails from one address.
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/step_8_2.png"
+    alt="Step 8 - create a new filter"
+  />
+</Frame>
+
+Click continue, and choose exactly what you want to do with these emails(I prefer to mark them read and also keep them in main inbox).
+**Make sure to choose “forward it to” option, and specify your summate inbox as a forwarding option.**
+
+Once you click create filter, your new emails that match criteria specified by this filter will be automatically forwarded to your [summate inbox](https://summate.io/inbox).
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/step_8_3.png"
+    alt="Step 8 - choose exactly what you want to do with these emails"
+  />
+</Frame>
+
+<Note>
+  [By default](/essentials/managing-newsletters#basic-concepts) you need to approve every new sender to your summate inbox, because
+  we want to prevent you from having spam getting into digests or spending your
+  summary credits.
+
+However, for auto-forwarding setup, you need to approve only first sender, and all
+subsequent senders will be auto-approved, as we recognize your main email address
+in already approved senders.
+
+</Note>
+
+### Recommended filters setup
+
+To make your life easier, here are some easy ideas for filters, that will save you a ton of time:
+
+- If you read many **substack** newsletters, setup sender to be `substack.com`
+- If you read many **beehiiv** newsletters, setup sender to be `beehiiv.com`
+- Typically all newsletters contain `Unsubscribe` link in the footer, so you can put `has the word "unsubscribe" in the words` condition to catch all newsletters across your inbox.
+-
 
 ## Other email providers
 
