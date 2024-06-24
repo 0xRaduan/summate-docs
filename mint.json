@@ -60,6 +60,7 @@
     {
       "group": "Essentials",
       "pages": [
+        "essentials/ai-inbox",
         "essentials/managing-newsletters",
         "essentials/other-sources",
         "essentials/customizing-digests",
