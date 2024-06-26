@@ -92,5 +92,11 @@
     "twitter": "https://twitter.com/summateio",
     "linkedin": "https://www.linkedin.com/company/summate",
     "discord": "https://discord.gg/summate"
+  },
+  "analytics": {
+    "posthog": {
+      "apiKey": "phc_e3UaWWN5DlOsm5eOXnAC6BbGKaA1BMiS1sgqpqtxoWH",
+      "apiHost": "https://us.posthog.com"
+    }
   }
 }
