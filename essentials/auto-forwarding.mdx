@@ -154,6 +154,60 @@ To make your life easier, here are some easy ideas for filters, that will save y
 - Typically all newsletters contain `Unsubscribe` link in the footer, so you can put `has the word "unsubscribe" in the words` condition to catch all newsletters across your inbox.
 -
 
+## Guide for Outlook users
+
+When setting up forwarding from Microsoft 365 based email to Summate, you may need take an additional step to complete the process. Microsoft 365 accounts default to block automatic email forwarding as part of their outbound spam protection.
+
+You will see a specific bounce message in your inbox at Microsoft 365 after attempting to set up forwarding to Summate if you need to adjust this setting. The text of the bounce will include this line:
+
+```
+550 5.7.520 Access denied, Your organization does not allow external forwarding.
+Please contact your administrator for further assistance. AS(7550)
+```
+
+This bounce does not mean that Summate rejected the message though we know it sounds like that is what it says — in fact Microsoft 365 did not attempt to deliver it to Summate because your Microsoft 365 account is set to not allow automatic external forwarding.
+
+Your Microsoft 365 administrator will need to allow automatic external forwarding for any 365 based email addresses you want to forward to Summate.
+
+We’ve created this guide to help your administrators find and change the outbound spam protection policy that is blocking your forward.
+
+[Configuring external email forwarding in Microsoft 365](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/external-email-forwarding?view=o365-worldwide) is Microsoft's documentation of the security features they've put in place. Below you will find a step-by-step guide for changing the specific portion of the automatic forwarding settings needed to work with Summate.
+
+You may choose to enable automatic forwarding for all mailboxes in your Microsoft 365 account, or enable it only for the mailboxes you're forwarding to Summate. Choose the option that is best according to your organization's security policies.
+
+#### Enable Automatic External Forwarding for All Mailboxes
+
+1. Log in to Microsoft 365 Defender as a Microsoft 365 administrator and choose **Email & collaboration > Policies & rules > Threat policies > Anti-spam policies** or head directly to the Anti-spam settings page here: https://security.microsoft.com/antispam
+
+If you do not see those options or no policies display on that page, the Microsoft 365 user you have used to log in does not have sufficient permissions to make these changes. Make sure you are logging in as an administrator for your account.
+
+Note that the policies you see in your own admin may differ from those shown here, as these are only the default policies.
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/auto_forwarding_outlook_1.png"
+    alt="Step 1 - go to the Anti-spam settings page"
+  />
+</Frame>
+
+2. Click on **Anti-spam outbound policy (Default)** and scroll down to click the **Edit protection settings** link at the bottom of the sidebar.
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/auto_forwarding_outlook_2.png"
+    alt="Step 2 - click on Anti-spam outbound policy (Default)"
+  />
+</Frame>
+
+3. Find the section called Forwarding Rules, and the dropdown list called _Automatic Forwarding Rules_. Pull that list down and choose **On - Forwarding is enabled**. Click Save at the bottom.
+
+<Frame>
+  <img
+    src="/images/auto-forwarding/auto_forwarding_outlook_3.png"
+    alt="Step 3 - find the section called Forwarding Rules, and the dropdown list called Automatic Forwarding Rules"
+  />
+</Frame>
+
 ## Other email providers
 
 - **Outlook:** please check [this guide](https://support.microsoft.com/en-au/office/turn-on-automatic-forwarding-in-outlook-7f2670a1-7fff-4475-8a3c-5822d63b0c8e), but in essence it should be similar to Gmail.
