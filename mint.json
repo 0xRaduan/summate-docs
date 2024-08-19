@@ -69,6 +69,10 @@
       ]
     },
     {
+      "group": "Chrome Extension",
+      "pages": ["extension/quickstart", "extension/settings", "extension/faq"]
+    },
+    {
       "group": "Integrations",
       "pages": [
         "integrations/available-integrations",
