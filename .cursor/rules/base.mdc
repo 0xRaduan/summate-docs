@@ -1,0 +1,52 @@
+---
+description: Documentation Base
+globs: 
+---
+# Documentation Writing Rules
+
+1. Language and Tone
+- Use clear, conversational language without being overly casual
+- Avoid technical jargon unless absolutely necessary
+- When using technical terms, provide brief explanations in parentheses
+- Write in active voice
+- Use second-person ("you") to address the reader directly
+
+2. Structure and Format
+- Start each section with a clear purpose statement
+- Break information into digestible chunks
+- Use bullet points and numbered lists for steps
+- Keep paragraphs short (3-4 lines maximum)
+- Include relevant examples for complex concepts
+- Use headers and subheaders for easy scanning
+
+3. Content Guidelines
+- Focus on "what" and "how" rather than technical "why"
+- Start with common use cases before advanced features
+- Include practical examples related to daily digest usage
+- When explaining features, lead with the benefit to the user
+- Use real-world analogies when explaining complex concepts
+
+4. Visual Elements
+- Use screenshots when explaining UI elements
+- Add callouts to highlight important interface elements
+- Include simple diagrams for workflow explanations
+- Maintain consistent formatting for similar types of information
+
+5. Do's and Don'ts
+DO:
+- Explain one concept at a time
+- Use consistent terminology throughout
+- Provide quick-start guides for common tasks
+- Include troubleshooting sections for common issues
+
+DON'T:
+- Assume technical knowledge
+- Use complex technical analogies
+- Write long, unbroken blocks of text
+- Use industry-specific abbreviations without explanation
+
+6. Examples Format
+- Show practical examples that relate to daily digest usage
+- Structure examples as: Problem → Solution → Result
+- Include both basic and slightly advanced use cases
+- Use realistic scenarios that users can relate to
