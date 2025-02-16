@@ -29,12 +29,6 @@
     "name": "Inbox",
     "url": "https://summate.io/inbox"
   },
-  "tabs": [
-    {
-      "name": "Useful Links",
-      "url": "useful-links"
-    }
-  ],
   "anchors": [
     {
       "name": "Documentation",
@@ -70,7 +64,12 @@
     },
     {
       "group": "Chrome Extension",
-      "pages": ["extension/quickstart", "extension/settings", "extension/faq"]
+      "pages": [
+        "extension/quickstart",
+        "extension/save-for-later",
+        "extension/settings",
+        "extension/faq"
+      ]
     },
     {
       "group": "Integrations",
@@ -80,15 +79,6 @@
         "integrations/substack",
         "integrations/youtube",
         "integrations/suggest"
-      ]
-    },
-    {
-      "group": "Useful Links",
-      "pages": [
-        "useful-links/ai",
-        "useful-links/crypto",
-        "useful-links/marketing",
-        "useful-links/productivity"
       ]
     }
   ],
