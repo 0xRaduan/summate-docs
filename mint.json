@@ -1,22 +1,26 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Summate Docs",
+  "name": "Summate",
   "logo": {
-    "dark": "/logo/dark.jpg",
-    "light": "/logo/light.jpg",
+    "dark": "/logo/summate-logo-dark.png",
+    "light": "/logo/summate-logo-light.png",
     "href": "https://docs.summate.io"
   },
   "modeToggle": {
-    "default": "dark"
+    "default": "light"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/favicon.ico",
   "colors": {
-    "primary": "#9F7AEA",
-    "light": "#D6BBFB",
-    "dark": "#6B46C1",
+    "primary": "#ff6b35",
+    "light": "#ff6b35",
+    "dark": "#ea580c",
+    "background": {
+      "light": "#faf9f7",
+      "dark": "#1f1f1f"
+    },
     "anchors": {
-      "from": "#6B46C1",
-      "to": "#D6BBFB"
+      "from": "#ff6b35",
+      "to": "#ea580c"
     }
   },
   "topbarLinks": [
@@ -48,37 +52,48 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "manifesto", "faq"]
-    },
-    {
-      "group": "Essentials",
+      "group": "Getting Started",
       "pages": [
-        "essentials/ai-inbox",
-        "essentials/managing-newsletters",
-        "essentials/other-sources",
-        "essentials/customizing-digests",
-        "essentials/auto-forwarding",
-        "essentials/settings"
+        "getting-started/quickstart",
+        "getting-started/concepts"
       ]
     },
     {
-      "group": "Chrome Extension",
+      "group": "Digests",
       "pages": [
-        "extension/quickstart",
-        "extension/save-for-later",
-        "extension/settings",
-        "extension/faq"
+        "digests/creating-digests",
+        "digests/digest-settings",
+        "digests/digest-templates"
       ]
     },
     {
-      "group": "Integrations",
+      "group": "Blocks",
       "pages": [
-        "integrations/available-integrations",
-        "integrations/readwise",
-        "integrations/substack",
-        "integrations/youtube",
-        "integrations/suggest"
+        "blocks/block-types",
+        "blocks/adding-sources",
+        "blocks/customizing-summaries"
+      ]
+    },
+    {
+      "group": "Reading",
+      "pages": [
+        "reading/email-digests",
+        "reading/web-reader"
+      ]
+    },
+    {
+      "group": "Account",
+      "pages": [
+        "account/ai-inbox",
+        "account/credits",
+        "account/integrations"
+      ]
+    },
+    {
+      "group": "Help",
+      "pages": [
+        "help/faq",
+        "help/troubleshooting"
       ]
     }
   ],
