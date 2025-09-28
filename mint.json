@@ -30,15 +30,10 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Inbox",
-    "url": "https://summate.io/inbox"
+    "name": "My Digests",
+    "url": "https://summate.io/v2"
   },
   "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.summate.io"
-    },
     {
       "name": "Community",
       "icon": "discord",
@@ -53,47 +48,35 @@
   "navigation": [
     {
       "group": "Getting Started",
+      "icon": "rocket",
       "pages": [
         "getting-started/quickstart",
-        "getting-started/concepts"
+        "getting-started/faq"
       ]
     },
     {
-      "group": "Digests",
+      "group": "Concepts",
+      "icon": "lightbulb",
       "pages": [
-        "digests/creating-digests",
-        "digests/digest-settings",
-        "digests/digest-templates"
-      ]
-    },
-    {
-      "group": "Blocks",
-      "pages": [
-        "blocks/block-types",
-        "blocks/adding-sources",
-        "blocks/customizing-summaries"
+        "concepts/digests",
+        "concepts/blocks",
+        "concepts/sources",
+        "concepts/inbox"
       ]
     },
     {
       "group": "Reading",
+      "icon": "book-open",
       "pages": [
-        "reading/email-digests",
-        "reading/web-reader"
+        "reading/web",
+        "reading/email"
       ]
     },
     {
       "group": "Account",
+      "icon": "user-gear",
       "pages": [
-        "account/ai-inbox",
-        "account/credits",
-        "account/integrations"
-      ]
-    },
-    {
-      "group": "Help",
-      "pages": [
-        "help/faq",
-        "help/troubleshooting"
+        "account"
       ]
     }
   ],
