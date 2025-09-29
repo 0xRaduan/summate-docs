@@ -4,176 +4,114 @@ icon: inbox
 description: Understanding your AI inbox for newsletter collection
 ---
 
-Your AI inbox is a smart email address that automatically collects, processes, and organizes your newsletter subscriptions for inclusion in digests.
+Your AI inbox is a unique email address that collects newsletters for your digests while keeping your personal emails private.
 
-## What is the AI Inbox?
+## Your Inbox Address
 
-Every Summate user gets a unique email address:
+Every Summate user gets a unique forwarding address:
+
 ```
 username@inbox.summate.io
 ```
 
-This inbox acts as your content collection point. Forward your newsletters here, and Summate automatically:
-- Identifies newsletter content vs regular email
-- Extracts and processes the content
-- Makes it available for your digests
-- Manages sender approvals
+Forward newsletters to this address, and they'll automatically appear in your content sources.
+
+## Privacy & Security First
+
+<Info>
+**Why we use forwarding instead of OAuth access:**
+
+1. **You control what we see** - Only emails you explicitly forward reach Summate. Your personal emails, banking statements, and private conversations stay completely private.
+
+2. **Universal compatibility** - Works with every email provider without special integrations or permissions.
+
+3. **No inbox access** - We never have access to your email account or password. We can't read emails you don't forward to us.
+</Info>
 
 ## How It Works
 
-### The Flow
-1. **Forward** newsletters to your AI inbox
-2. **AI processes** the content automatically
-3. **Smart detection** identifies newsletters vs other emails
-4. **Content extraction** pulls text, images, and links
-5. **Available in blocks** for digest creation
+<Steps>
+  <Step title="Set up forwarding">
+    Configure your email to forward newsletters to your AI inbox.
 
-### Smart Processing
+    See our [complete forwarding guide](/guides/auto-forwarding) for Gmail, Outlook, iCloud, and more.
+  </Step>
 
-The AI inbox includes:
-- **Newsletter detection** - Distinguishes newsletters from transactional emails
-- **Sender verification** - Tracks and approves legitimate sources
-- **Content extraction** - Pulls full content even from link-only emails
-- **Spam filtering** - Blocks promotional and unwanted content
+  <Step title="Newsletters arrive">
+    Forwarded emails are received and stored in your inbox. You can view all senders and their emails at [summate.io/v2/inbox](https://summate.io/v2/inbox).
+  </Step>
 
-## Setting Up Forwarding
+  <Step title="Manage senders">
+    Review your senders and emails in your inbox:
+    - See all newsletters received
+    - Block spam or unwanted senders
+    - Keep your sources clean
+  </Step>
 
-### Quick Setup
-
-**Gmail**
-1. Settings → Forwarding and POP/IMAP
-2. Add forwarding address (your AI inbox)
-3. Confirm verification email
-4. Create filter for newsletters
-5. Action: Forward to AI inbox
-
-**Outlook/Hotmail**
-1. Settings → Mail → Forwarding
-2. Enable forwarding
-3. Enter AI inbox address
-4. Choose "Keep a copy of forwarded messages"
-
-**Apple Mail**
-1. Preferences → Rules
-2. Add Rule for newsletters
-3. Action: Redirect to AI inbox
-
-### Smart Filters
-
-Create automatic forwarding rules:
-
-**By Domain**
-```
-From: @substack.com OR @convertkit.com OR @mailchimp.com
-→ Forward to AI inbox
-```
-
-**By Keywords**
-```
-Subject contains: Newsletter OR Weekly OR Digest
-→ Forward to AI inbox
-```
-
-**By Label** (Gmail)
-```
-Has label: Newsletters
-→ Forward to AI inbox
-```
+  <Step title="Add to digests">
+    Include newsletters in your digests by adding an Email block and selecting which senders to include.
+  </Step>
+</Steps>
 
 ## Managing Your Inbox
 
-### Approval Queue
+Access your inbox at [summate.io/v2/inbox](https://summate.io/v2/inbox) to:
 
-New senders appear in your approval queue:
-- **One-click approval** for newsletters
-- **Block** non-newsletter content
-- **Auto-approve** trusted domains
-- **Bulk actions** for multiple senders
+<CardGroup cols={2}>
+  <Card title="View Senders" icon="users">
+    See all email senders and the newsletters they've sent
+  </Card>
+  <Card title="Block Spam" icon="ban">
+    Remove unwanted senders so they won't appear in any digests
+  </Card>
+</CardGroup>
 
-### Sender Management
+### Using Newsletters in Digests
 
-**Auto-Approved Sources:**
-- Major newsletter platforms (Substack, ConvertKit, etc.)
-- Previously approved senders
-- Whitelisted domains
+To include newsletters in your digest:
+1. Create or edit a digest
+2. Add an **Email block**
+3. Select which senders to include
+4. Configure summary settings
 
-**Manual Review Needed:**
-- New or unknown senders
-- Personal emails
-- Ambiguous content
-
-### Processing Status
-
-Track email processing:
-- 🔵 **Received** - Email arrived at inbox
-- 🟡 **Processing** - AI analyzing content
-- 🟢 **Approved** - Available in sources
-- 🔴 **Blocked** - Marked as non-newsletter
-
-## Advanced Features
-
-### Bulk Import
-Forward multiple existing newsletters:
-1. Search your email for newsletters
-2. Select all relevant emails
-3. Forward to AI inbox
-4. Review in approval queue
-
-### Domain Controls
-- Whitelist entire domains
-- Block specific senders
-- Set auto-approval rules
-- Configure processing priority
-
-### Content Settings
-- Full text extraction
-- Image processing
-- Link following
-- Archive duration
-
-## Privacy & Security
-
-### Data Handling
-- Emails are processed securely
-- Content is encrypted at rest
-- No human reads your emails
-- Delete anytime from dashboard
-
-### Access Control
-- Unique inbox per user
-- No shared processing
-- Sender verification
-- Spam protection
+Blocked senders won't appear as options in your Email blocks.
 
 ## Best Practices
 
-1. **Start with existing subscriptions** - Forward your current newsletters first
-2. **Use filters liberally** - Automate forwarding with email rules
-3. **Review weekly** - Check approval queue for new senders
-4. **Clean regularly** - Remove inactive or low-quality sources
-5. **Protect your inbox** - Don't share your AI inbox address publicly
+<Tip>
+1. **Use filters** - Don't forward everything, only newsletters
+2. **Start small** - Forward a few newsletters first to test
+3. **Review weekly** - Check your inbox for new senders
+4. **Keep it clean** - Block spam and remove sources you no longer read
+</Tip>
 
-## Troubleshooting
+## Common Questions
 
-### Newsletters Not Appearing
-- Check email was forwarded successfully
-- Verify AI inbox address is correct
-- Look in approval queue
-- Check processing status
+<AccordionGroup>
+  <Accordion title="How quickly do emails appear?">
+    Forwarded emails typically appear in your inbox within seconds of being forwarded.
+  </Accordion>
 
-### Forwarding Issues
-- Confirm forwarding is enabled
-- Verify filters are active
-- Check spam/promotions folders
-- Test with a single email first
+  <Accordion title="Can I forward all my emails?">
+    Technically yes, but we strongly recommend using filters to forward only newsletters. This protects your privacy and keeps your sources relevant.
+  </Accordion>
 
-### Processing Delays
-- Normal processing: 2-5 minutes
-- High volume times: up to 15 minutes
-- Check status in dashboard
-- Contact support if persistent
+  <Accordion title="What happens to blocked senders?">
+    Blocked senders remain in your inbox history but won't appear as options in Email blocks for your digests.
+  </Accordion>
+
+  <Accordion title="Is my forwarded content secure?">
+    Yes. All content is encrypted at rest and you can delete emails anytime from your inbox at [summate.io/v2/inbox](https://summate.io/v2/inbox).
+  </Accordion>
+</AccordionGroup>
 
 ## Next Steps
-- Set up [Sources](/concepts/sources) from your inbox
-- Configure [Blocks](/concepts/blocks) with approved senders
-- Create your first [Digest](/concepts/digests)
+
+<CardGroup cols={2}>
+  <Card title="Set Up Forwarding" icon="arrow-right" href="/guides/auto-forwarding">
+    Complete guide for all email providers
+  </Card>
+  <Card title="Add to Digest" icon="plus" href="/concepts/blocks">
+    Use approved sources in your blocks
+  </Card>
+</CardGroup>
