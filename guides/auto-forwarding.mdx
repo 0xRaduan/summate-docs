@@ -13,195 +13,508 @@ The overall process typically takes about 5 minutes of time, and generally requi
 - add your `@inbox.summate.io` email to your approved forwarding addresses
 - setup filters to forward newsletters to your `@inbox.summate.io` email
 
+## Security First
+
+<Info>
+**Why we use email forwarding instead of OAuth**
+
+We deliberately chose email forwarding over direct inbox access for two key reasons:
+
+1. **Universal Compatibility** - Works with every email provider (Gmail, Outlook, iCloud, ProtonMail, corporate emails, etc.) without special integrations
+
+2. **Privacy by Design** - We only see emails you explicitly choose to forward. Your personal emails, bank statements, and sensitive communications stay completely private. We never have access to your full inbox.
+
+This approach gives you complete control over what content reaches Summate while keeping your email account secure.
+</Info>
+
 ## Step-by-step guide for Gmail
 
-### 1. Go to Gmail Settings
+<Steps>
+  <Step title="Go to Gmail Settings">
+    Click the gear icon in Gmail and select "See all settings".
 
-<Frame>
-  <div className="flex flex-row gap-10">
-    <img
-      src="/images/auto-forwarding/step_1_1.png"
-      alt="Step 1 - go to gmail settings"
-      style={{ marginRight: "10px" }}
-    />
-    <img
-      src="/images/auto-forwarding/step_1_2.png"
-      alt="Step 1 - go to gmail settings"
-      style={{ marginLeft: "10px" }}
-    />
-  </div>
-</Frame>
+    <Frame>
+      <div className="flex flex-row gap-10">
+        <img
+          src="/images/auto-forwarding/step_1_1.png"
+          alt="Gmail gear icon"
+          style={{ marginRight: "10px" }}
+        />
+        <img
+          src="/images/auto-forwarding/step_1_2.png"
+          alt="Gmail settings menu"
+          style={{ marginLeft: "10px" }}
+        />
+      </div>
+    </Frame>
+  </Step>
 
-### 2. Navigate to 'Forwarding and POP/IMAP'
+  <Step title="Navigate to Forwarding and POP/IMAP">
+    Click on the "Forwarding and POP/IMAP" tab in the settings menu.
 
-<Frame>
-  <img
-    src="/images/auto-forwarding/step_2.png"
-    alt="Step 2 - navigate to forwarding and POP/IMAP"
-  />
-</Frame>
+    <Frame>
+      <img
+        src="/images/auto-forwarding/step_2.png"
+        alt="Forwarding and POP/IMAP tab"
+      />
+    </Frame>
+  </Step>
 
-### 3. Add a new Forwarding Address
+  <Step title="Add a new Forwarding Address">
+    Click "Add a forwarding address" button.
+
+    <Warning>
+      **Important:** Do NOT enable "Forward a copy of incoming mail to..."
+
+      This would forward ALL your emails. Instead, you'll set up selective forwarding with filters in Step 8.
+    </Warning>
+
+    <Frame>
+      <img
+        src="/images/auto-forwarding/step_3.png"
+        alt="Add forwarding address button"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Enter your Summate inbox address">
+    Enter your unique Summate inbox: `username@inbox.summate.io`
+
+    You should have received this during onboarding. If you haven't, visit [your inbox page](https://summate.io/inbox) to find it.
+
+    <Frame>
+      <img
+        src="/images/auto-forwarding/step_4.png"
+        alt="Enter forwarding address dialog"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Authorize your request">
+    Gmail will ask you to verify your identity (possibly through 2FA).
+
+    After authorization, Gmail sends a verification link to your Summate inbox.
+  </Step>
+
+  <Step title="Find the verification email">
+    1. Navigate to [your Summate inbox](https://summate.io/inbox)
+    2. Look for a new sender in the pending section
+    3. Click on the Gmail verification email
+
+    <Frame>
+      <img
+        src="/images/auto-forwarding/step_6.png"
+        alt="Gmail verification email in Summate inbox"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Complete verification">
+    Copy the verification link from the email (it starts with `https://mail-settings.google.com/mail/...`) and paste it into your browser.
+
+    <Frame>
+      <img
+        src="/images/auto-forwarding/step_7.png"
+        alt="Verification link in email"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Set up forwarding filters">
+    Now that your Summate address is verified, create filters to selectively forward newsletters.
+
+    **Part A: Go to Filters and Blocked Addresses**
+
+    <Frame>
+      <img
+        src="/images/auto-forwarding/step_8_1.png"
+        alt="Filters and blocked addresses tab"
+      />
+    </Frame>
+
+    **Part B: Create a new filter**
+
+    Click "Create a new filter" and specify your criteria (e.g., from a specific sender).
+
+    <Frame>
+      <img
+        src="/images/auto-forwarding/step_8_2.png"
+        alt="Create new filter dialog"
+      />
+    </Frame>
+
+    **Part C: Configure forwarding action**
+
+    1. Check "Forward it to" and select your Summate inbox
+    2. Optionally check "Mark as read" to keep your inbox clean
+    3. Click "Create filter"
+
+    <Frame>
+      <img
+        src="/images/auto-forwarding/step_8_3.png"
+        alt="Filter action configuration"
+      />
+    </Frame>
+  </Step>
+</Steps>
+
+<Info>
+See [Recommended Filter Settings](#recommended-filter-settings) below for smart filtering ideas that will save you time.
+</Info>
+
+## Step-by-step guide for Outlook/Microsoft 365
+
+<Note>
+Microsoft Enterprise 365 accounts often block automatic email forwarding by default. You may need administrator access to enable this feature.
+</Note>
+
+### Common Error Message
+
+If you see this error when trying to forward emails:
 
 <Warning>
-**Do NOT select the "Forward a copy of incoming mail to …" option!**
-
-Instead, setup filtering with forwarding([step 8 of the guide](/guides/auto-forwarding#8-setting-up-filtering))
-
-**Otherwise, all of your emails will be forwarded to the summate inbox, and that can be annoying or compromising data to the LLMs which you do not want to compromise.**
-
-</Warning>
-
-<Frame>
-  <img
-    src="/images/auto-forwarding/step_3.png"
-    alt="Step 3 - add a new forwarding address"
-  />
-</Frame>
-
-### 4. Enter your summate email inbox
-
-You should have created it during the onboarding. If you haven't please go to the [inbox page](https://summate.io/inbox) and do that.
-
-<Frame>
-  <img
-    src="/images/auto-forwarding/step_4.png"
-    alt="Step 4 - enter your summate email inbox"
-  />
-</Frame>
-
-### 5. Authorize your request via Gmail
-
-You might need to verify that it's you(go through 2FA process with Gmail).
-
-After that, Gmail will send a verification link to your [summate inbox](https://summate.io/inbox).
-
-### 6. Find an email for gmail verification
-
-You will receive an email to your summate address. Navigate to [your inbox](https://summate.io/inbox) and you will see a new sender in pending section. After you click on it, you will see something similar to the image below:
-
-<Frame>
-  <img
-    src="/images/auto-forwarding/step_6.png"
-    alt="Step 6 - verify your summate address for gmail auto-forwarding"
-  />
-</Frame>
-
-### 7. Paste the verification link into your browser
-
-Once you open the email, you will see something similar to the screenshot below. You need to copy and paste the link provided there into your browser.
-It should be along the lines: `https://mail-settings.google.com/mail/...`
-
-<Frame>
-  <img
-    src="/images/auto-forwarding/step_7.png"
-    alt="Step 7 - paste the verification link into your browser"
-  />
-</Frame>
-
-### 8. Setting up filtering
-
-Once your summate email address was approved for gmail forwarding, you can setup as much filters as you want and choose to auto-forward emails to your summate inbox as a setting on those filters.
-
-First, go to the "filters and blocked addresses" page.
-
-<Frame>
-  <img
-    src="/images/auto-forwarding/step_8_1.png"
-    alt="Step 8 - go to the filters and blocked addresses page"
-  />
-</Frame>
-
-Then, create a new filter:
-
-For example a simple one to catch all emails from one address.
-
-<Frame>
-  <img
-    src="/images/auto-forwarding/step_8_2.png"
-    alt="Step 8 - create a new filter"
-  />
-</Frame>
-
-Click continue, and choose exactly what you want to do with these emails(I prefer to mark them read and also keep them in main inbox).
-**Make sure to choose "forward it to" option, and specify your summate inbox as a forwarding option.**
-
-Once you click create filter, your new emails that match criteria specified by this filter will be automatically forwarded to your [summate inbox](https://summate.io/inbox).
-
-<Frame>
-  <img
-    src="/images/auto-forwarding/step_8_3.png"
-    alt="Step 8 - choose exactly what you want to do with these emails"
-  />
-</Frame>
-
-### Recommended filters setup
-
-To make your life easier, here are some easy ideas for filters, that will save you a ton of time:
-
-- If you read many **substack** newsletters, setup sender to be `substack.com`
-- If you read many **beehiiv** newsletters, setup sender to be `beehiiv.com`
-- Typically all newsletters contain `Unsubscribe` link in the footer, so you can put `has the word "unsubscribe" in the words` condition to catch all newsletters across your inbox.
-
-
-## Guide for Outlook users
-
-When setting up forwarding from Microsoft 365 based email to Summate, you may need take an additional step to complete the process. Microsoft 365 accounts default to block automatic email forwarding as part of their outbound spam protection.
-
-You will see a specific bounce message in your inbox at Microsoft 365 after attempting to set up forwarding to Summate if you need to adjust this setting. The text of the bounce will include this line:
-
 ```
 550 5.7.520 Access denied, Your organization does not allow external forwarding.
 Please contact your administrator for further assistance. AS(7550)
 ```
 
-This bounce does not mean that Summate rejected the message though we know it sounds like that is what it says — in fact Microsoft 365 did not attempt to deliver it to Summate because your Microsoft 365 account is set to not allow automatic external forwarding.
+This means your Microsoft 365 account has external forwarding disabled. Follow the steps below to enable it.
+</Warning>
 
-Your Microsoft 365 administrator will need to allow automatic external forwarding for any 365 based email addresses you want to forward to Summate.
+### Enabling External Forwarding (Administrator Required)
 
-We've created this guide to help your administrators find and change the outbound spam protection policy that is blocking your forward.
+<Steps>
+  <Step title="Access Microsoft 365 Defender">
+    Log in as an administrator and navigate to:
+    - **Email & collaboration** → **Policies & rules** → **Threat policies** → **Anti-spam policies**
 
-[Configuring external email forwarding in Microsoft 365](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/external-email-forwarding?view=o365-worldwide) is Microsoft's documentation of the security features they've put in place. Below you will find a step-by-step guide for changing the specific portion of the automatic forwarding settings needed to work with Summate.
+    Or go directly to: [https://security.microsoft.com/antispam](https://security.microsoft.com/antispam)
 
-You may choose to enable automatic forwarding for all mailboxes in your Microsoft 365 account, or enable it only for the mailboxes you're forwarding to Summate. Choose the option that is best according to your organization's security policies.
+    <Frame>
+      <img
+        src="/images/auto-forwarding/auto_forwarding_outlook_1.png"
+        alt="Microsoft 365 Anti-spam settings page"
+      />
+    </Frame>
 
-#### Enable Automatic External Forwarding for All Mailboxes
+    <Tip>
+      If you don't see these options, ensure you're logged in with administrator privileges.
+    </Tip>
+  </Step>
 
-1. Log in to Microsoft 365 Defender as a Microsoft 365 administrator and choose **Email & collaboration > Policies & rules > Threat policies > Anti-spam policies** or head directly to the Anti-spam settings page here: https://security.microsoft.com/antispam
+  <Step title="Edit Anti-spam Outbound Policy">
+    Click on **Anti-spam outbound policy (Default)** and scroll down to click **Edit protection settings**.
 
-If you do not see those options or no policies display on that page, the Microsoft 365 user you have used to log in does not have sufficient permissions to make these changes. Make sure you are logging in as an administrator for your account.
+    <Frame>
+      <img
+        src="/images/auto-forwarding/auto_forwarding_outlook_2.png"
+        alt="Anti-spam outbound policy settings"
+      />
+    </Frame>
+  </Step>
 
-Note that the policies you see in your own admin may differ from those shown here, as these are only the default policies.
+  <Step title="Enable Forwarding Rules">
+    1. Find the **Forwarding Rules** section
+    2. Locate the **Automatic Forwarding Rules** dropdown
+    3. Select **On - Forwarding is enabled**
+    4. Click **Save** at the bottom
 
-<Frame>
-  <img
-    src="/images/auto-forwarding/auto_forwarding_outlook_1.png"
-    alt="Step 1 - go to the Anti-spam settings page"
-  />
-</Frame>
+    <Frame>
+      <img
+        src="/images/auto-forwarding/auto_forwarding_outlook_3.png"
+        alt="Enabling automatic forwarding rules"
+      />
+    </Frame>
+  </Step>
+</Steps>
 
-2. Click on **Anti-spam outbound policy (Default)** and scroll down to click the **Edit protection settings** link at the bottom of the sidebar.
+### Setting Up Forwarding Rules in Outlook
 
-<Frame>
-  <img
-    src="/images/auto-forwarding/auto_forwarding_outlook_2.png"
-    alt="Step 2 - click on Anti-spam outbound policy (Default)"
-  />
-</Frame>
+Once external forwarding is enabled, follow these steps to create rules that forward newsletters:
 
-3. Find the section called Forwarding Rules, and the dropdown list called _Automatic Forwarding Rules_. Pull that list down and choose **On - Forwarding is enabled**. Click Save at the bottom.
+<Steps>
+  <Step title="Open Rules Settings">
+    **In Outlook Desktop:**
+    1. Go to **File** → **Manage Rules & Alerts**
+    2. Click **New Rule**
 
-<Frame>
-  <img
-    src="/images/auto-forwarding/auto_forwarding_outlook_3.png"
-    alt="Step 3 - find the section called Forwarding Rules, and the dropdown list called Automatic Forwarding Rules"
-  />
-</Frame>
+    **In Outlook Web:**
+    1. Click the Settings gear icon
+    2. Select **View all Outlook settings**
+    3. Go to **Mail** → **Rules**
+    4. Click **Add new rule**
+  </Step>
 
-## Other email providers
+  <Step title="Create a Forwarding Rule">
+    1. Name your rule (e.g., "Forward Newsletters to Summate")
+    2. Add conditions to identify newsletters:
+       - **From**: Specific sender or domain
+       - **Subject contains**: Newsletter keywords
+       - **Body contains**: "unsubscribe" (use cautiously)
 
-- **iCloud:** please check [this guide](https://support.apple.com/guide/icloud/automatically-forward-email-mm6b1a3960/icloud), but in essence it should be similar to Gmail.
+    See [Recommended Filter Settings](#recommended-filter-settings) for smart filtering ideas.
+  </Step>
 
-## Troubleshooting
+  <Step title="Set the Forward Action">
+    1. Add an action: **Forward to**
+    2. Enter your Summate inbox: `username@inbox.summate.io`
+    3. Optionally add more actions:
+       - Mark as read
+       - Move to folder
+       - Apply category
+  </Step>
 
-🚧 Under construction 🚧
+  <Step title="Review and Enable">
+    1. Review your rule settings
+    2. Ensure "Turn on this rule" is checked
+    3. Click **Save** or **OK**
+    4. Test with a sample newsletter
+  </Step>
+</Steps>
+
+<Info>
+For detailed instructions with screenshots, see Microsoft's guide: [Manage email messages by using rules](https://support.microsoft.com/en-us/office/manage-email-messages-by-using-rules-in-outlook-c24f5dea-9465-4df4-ad17-a50704d66c59)
+</Info>
+
+## Step-by-step guide for iCloud Mail
+
+<Note>
+All iCloud Mail emails, including those sent to custom domain addresses, can be automatically forwarded to your Summate inbox.
+</Note>
+
+<Steps>
+  <Step title="Access iCloud Mail Settings">
+    1. Go to [icloud.com/mail](https://icloud.com/mail)
+    2. Sign in to your Apple Account
+    3. Click the **Settings** button at the top of the Mailboxes list
+    4. Choose **Settings**
+  </Step>
+
+  <Step title="Configure Mail Forwarding">
+    1. Select **Mail Forwarding** in the sidebar
+    2. Check the **"Forward my email to"** checkbox
+    3. Enter your Summate inbox address: `username@inbox.summate.io`
+  </Step>
+
+  <Step title="Optional Settings">
+    **Storage Management:**
+    - To save iCloud storage, check **"Delete messages after forwarding"**
+    - Otherwise, copies of forwarded emails will be stored in iCloud
+
+    **Selective Forwarding:**
+    - You can set up rules to forward only certain emails
+    - Each rule can only use one forwarding address
+    - See [Set up rules to filter email](https://support.apple.com/guide/icloud/set-up-rules-to-filter-email-mm6b1a3f68/icloud) for details
+    - Check our [Recommended Filter Settings](#recommended-filter-settings) for newsletter filtering ideas
+  </Step>
+</Steps>
+
+### To Stop Forwarding
+
+1. Go to [icloud.com/mail](https://icloud.com/mail) and sign in
+2. Access **Settings** → **Mail Forwarding**
+3. Uncheck the **"Forward my email to"** checkbox
+
+<Info>
+For more details, see Apple's official guide: [Automatically forward email in Mail on iCloud.com](https://support.apple.com/guide/icloud/automatically-forward-email-mm6b1a3960/icloud)
+</Info>
+
+## Step-by-step guide for Yahoo Mail
+
+<Warning>
+Yahoo Mail only supports **all-or-nothing** forwarding on paid plans (Yahoo Mail Plus). There's no way to forward only newsletters - all emails will be forwarded to Summate.
+</Warning>
+
+### Requirements
+- **Yahoo Mail Plus** or **Access + Forwarding** subscription (not available on free accounts)
+- Verification of forwarding address
+
+<Steps>
+  <Step title="Access Forwarding Settings">
+    1. Open Yahoo Mail in your browser
+    2. Click the **Settings gear** → **More settings**
+    3. Navigate to **Mailboxes**
+    4. Click on your primary email account
+  </Step>
+
+  <Step title="Enable Auto-Forwarding">
+    1. Find the **Auto-forwarding** section
+    2. Enter your Summate inbox: `username@inbox.summate.io`
+    3. Click **Verify**
+    4. Check your Summate inbox for verification email
+    5. Complete verification and **Save**
+  </Step>
+</Steps>
+
+<Note>
+**Important Limitation:** Yahoo filters can move emails to folders but **cannot** forward them. If you need selective forwarding for newsletters only, consider using a different email provider.
+</Note>
+
+## Step-by-step guide for ProtonMail
+
+<Info>
+ProtonMail supports selective forwarding with custom rules on **paid plans only**. Free accounts cannot use auto-forwarding.
+</Info>
+
+### Security Note
+When forwarding from ProtonMail to non-Proton addresses (like Summate), emails will **not** be end-to-end encrypted. Only the emails matching your forwarding rules are affected.
+
+<Steps>
+  <Step title="Access Forwarding Settings">
+    1. Sign in at [mail.proton.me](https://mail.proton.me)
+    2. Click **Settings (gear icon)** → **All settings**
+    3. Navigate to **Proton Mail** → **Auto-reply and forward**
+    4. Click **Forward emails** → **Add forwarding rule**
+  </Step>
+
+  <Step title="Create Selective Forwarding Rule">
+    1. **Forward from**: Select your Proton address
+    2. **Forward to**: Enter `username@inbox.summate.io`
+    3. Click **Add condition** for selective forwarding:
+       - **From** contains: newsletter domains
+       - **Subject** contains: "newsletter", "digest", "weekly"
+       - Add multiple conditions for accuracy
+    4. Click **Send confirmation email**
+  </Step>
+
+  <Step title="Complete Verification">
+    1. Check your Summate inbox for the verification email
+    2. Click **Accept forwarding** in the email
+    3. Your rule is now active
+
+    Manage rules anytime from **Auto-reply and forward** → **Forward emails**
+  </Step>
+</Steps>
+
+<Tip>
+For advanced filtering, use ProtonMail's **Sieve filters** (Settings → Filters → Add sieve filter) for header-level matching and complex logic.
+</Tip>
+
+## Step-by-step guide for Fastmail
+
+<Note>
+Fastmail offers excellent forwarding capabilities with both simple rules and advanced Sieve filters.
+</Note>
+
+<Steps>
+  <Step title="Create a Forwarding Rule">
+    1. Go to **Settings** → **Rules** (or **Filters & Rules**)
+    2. Click **Create rule**
+    3. Add conditions to identify newsletters:
+       - **From** contains common newsletter domains
+       - **Subject** contains newsletter keywords
+       - **List-Id** header exists (most accurate)
+  </Step>
+
+  <Step title="Set Forward Action">
+    Choose the action type:
+    - **Send a copy to**: Enter `username@inbox.summate.io`
+      - Preserves original sender (recommended)
+      - Better for DMARC compliance
+    - **Forward**: Re-sends from your address
+      - Replies come back to you
+  </Step>
+
+  <Step title="Advanced Filtering (Optional)">
+    For power users, use Sieve scripting:
+
+    ```sieve
+    # Forward newsletters based on List-Id header
+    if header :contains "List-Id" "newsletter" {
+      redirect :copy "username@inbox.summate.io";
+      keep;
+    }
+    ```
+
+    Access via Settings → Advanced → Sieve Filtering
+  </Step>
+</Steps>
+
+<Info>
+Fastmail's "Send a copy to" (redirect) typically has better deliverability than traditional forwarding, especially with strict DMARC policies.
+</Info>
+
+## Step-by-step guide for HEY
+
+<Warning>
+HEY only supports **all-or-nothing** forwarding. You cannot forward only newsletters - it's either everything or nothing. HEY's philosophy doesn't include traditional email rules or filters.
+</Warning>
+
+### How HEY Handles Newsletters
+HEY automatically routes newsletters to **The Feed** (a separate view), but there's no way to auto-forward only Feed items to external addresses.
+
+<Steps>
+  <Step title="Enable Global Forwarding (If Needed)">
+    If you must forward all emails:
+
+    1. Go to [app.hey.com/accounts](https://app.hey.com/accounts)
+    2. Select your account
+    3. Navigate to **Forwarding & Sending**
+    4. Add `username@inbox.summate.io` as forwarding address
+    5. Complete verification
+
+    **Note:** This forwards ALL emails except spam
+  </Step>
+
+  <Step title="Alternative Approach">
+    For selective forwarding, consider this workaround:
+
+    1. Forward everything from HEY to another provider (Gmail/Fastmail)
+    2. Set up selective rules in that provider
+    3. Forward only newsletters to Summate from there
+
+    This adds complexity but enables selective forwarding.
+  </Step>
+</Steps>
+
+<Note>
+Given HEY's limitations, most users find it easier to manually forward individual newsletters or use HEY's built-in Feed feature instead of auto-forwarding.
+</Note>
+
+## Recommended Filter Settings
+
+Setting up the right filters ensures only newsletters reach your Summate inbox, not your personal emails. Here are proven filtering strategies:
+
+<CardGroup cols={2}>
+  <Card title="Platform-Specific Filters" icon="envelope">
+    **Newsletter Platforms:**
+    - Substack: `from:substack.com`
+    - Beehiiv: `from:beehiiv.com`
+    - ConvertKit: `from:convertkit.com`
+    - Ghost: `from:ghost.io`
+    - Mailchimp: `from:mailchimp.com`
+
+    These filters catch all newsletters from major platforms.
+  </Card>
+
+  <Card title="Smart Keyword Filters" icon="filter">
+    **Combine multiple criteria for accuracy:**
+    - `from:newsletter AND has:unsubscribe`
+    - `subject:"weekly" OR subject:"daily" OR subject:"digest"`
+    - `from:noreply AND has:unsubscribe`
+
+    More specific = fewer false positives.
+  </Card>
+</CardGroup>
+
+### Universal "Unsubscribe" Filter
+
+<Warning>
+**Use with caution:** The "has the words: unsubscribe" filter catches most newsletters but may also forward:
+- Order confirmations
+- Service notifications
+- Marketing emails
+- Account updates
+
+For best results, combine with sender filters or use more specific criteria.
+</Warning>
+
+### Tips for Better Filtering
+
+<Tip>
+**Best Practices:**
+1. **Start specific** - Begin with known newsletter senders
+2. **Test first** - Apply filters to existing emails before enabling forwarding
+3. **Refine regularly** - Review what's being forwarded weekly
+4. **Use labels** - Mark forwarded emails in your main inbox for easy tracking
+</Tip>
