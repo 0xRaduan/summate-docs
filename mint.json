@@ -73,6 +73,13 @@
       ]
     },
     {
+      "group": "Guides",
+      "icon": "book-bookmark",
+      "pages": [
+        "guides/auto-forwarding"
+      ]
+    },
+    {
       "group": "Settings",
       "icon": "gear",
       "pages": [
