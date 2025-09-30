@@ -1,84 +1,190 @@
 ---
 title: Digests
 icon: newspaper
-description: Understanding how to build and customize your content digests
+description: Understanding how digests work and how to customize them
 ---
 
-Digests are your personalized content bundles, delivered on your schedule. Think of them as your custom newspaper, assembled from all your sources.
+A digest is your personalized content report based on what happened during a specific timeframe. Think of it as a custom newspaper that automatically assembles summaries from all your sources and delivers them on your schedule.
+
+<Frame>
+  <img src="/images/digests-list.png" alt="Example of digests list showing multiple configured digests" />
+</Frame>
 
 ## What is a Digest?
 
-A digest is a curated collection of content from your chosen sources, delivered at specific times. Each digest can be tailored for different purposes - a morning news brief, weekly industry roundup, or weekend reading list.
+Each digest is a collection of AI-generated summaries from your content sources during a particular time period. Whether it's daily tech news, weekly industry updates, or weekend reading recommendations, digests bring everything together in one place.
 
-## Digest Builder
+<Info>
+Digests are composed of multiple [blocks](/concepts/blocks). Each block pulls content from different sources and can have its own custom instructions for summarization.
+</Info>
 
-The digest builder lets you create and customize digests with full control over:
+## How Digests Work
 
-### Content & Sources
-- Add multiple content blocks
-- Mix different source types (newsletters, YouTube, RSS)
-- Set relevance filters
-- Control summary length
+<Steps>
+  <Step title="Content Collection">
+    Summate monitors your sources and collects new content since your last digest was sent.
+  </Step>
 
-### Schedule & Delivery
-- **Frequency**: Daily, weekdays, weekly, or custom
-- **Timing**: Choose exact delivery time in your timezone
-- **Format**: Quick scan (5 min), balanced (10 min), or deep dive (20 min)
-- **Language**: Available in 13 languages
+  <Step title="AI Processing">
+    Our AI summarizes each piece of content according to your custom instructions at the block, digest, or account level.
+  </Step>
 
-### Organization Patterns
+  <Step title="Digest Generation">
+    All summaries are compiled into a single digest at your scheduled time.
+  </Step>
 
-**By Topic**
-- Tech News (daily at 8 AM)
-- Market Updates (weekdays at 6 AM)
-- Weekend Reads (Saturdays at 10 AM)
+  <Step title="Delivery">
+    Your digest is delivered via email and made available on the web for reading.
+  </Step>
+</Steps>
 
-**By Purpose**
-- Morning Brief (everything to start the day)
-- Lunch Break (light reading)
-- Weekly Roundup (comprehensive review)
+## Scheduling Your Digests
 
-**By Source Type**
-- Newsletter Digest (all email subscriptions)
-- YouTube Catchup (video summaries)
-- Blog Reader (RSS feeds only)
+Control when and how often you receive digests:
 
-## Key Features
+<Tabs>
+  <Tab title="Daily">
+    Receive your digest every day at a chosen time. You can even set up multiple daily digests - just make sure they're at least 4 hours apart.
 
-### Smart Scheduling
-- Automatic timezone adjustment
-- Pause for vacations
-- Preview before sending
-- Multiple daily digests (space 4+ hours apart)
+    **Example:** Morning brief at 7 AM, afternoon updates at 2 PM
+  </Tab>
 
-### Content Control
-- Minimum relevance filtering
-- Duplicate detection
-- Age limits (e.g., last 7 days only)
-- Custom summary lengths per block
+  <Tab title="Weekly">
+    Choose specific days of the week and a time to receive your digest.
 
-### Delivery Options
-- **Email**: Direct to inbox with custom subject lines
-- **Web Reader**: Access at summate.io/digest
-- **Export**: PDF downloads, Readwise integration
+    **Example:** Monday, Wednesday, Friday at 9 AM
+  </Tab>
+
+  <Tab title="Monthly">
+    Select which days of the month to receive your digest.
+
+    **Example:** 1st and 15th of each month at 10 AM
+  </Tab>
+</Tabs>
+
+<Tip>
+Set your timezone during onboarding or in [account settings](/account) to ensure digests arrive at the right time. Delivery times automatically adjust for daylight saving time.
+</Tip>
+
+## Building Your Digest
+
+Each digest is made up of [blocks](/concepts/blocks) that pull content from your sources:
+
+<CardGroup cols={2}>
+  <Card title="Email Block" icon="envelope">
+    Summaries from newsletters received in your [Summate Inbox](/concepts/inbox)
+  </Card>
+  <Card title="YouTube Block" icon="youtube">
+    Summaries from your subscribed YouTube channels
+  </Card>
+  <Card title="RSS Block" icon="rss">
+    Summaries from blogs and websites with RSS feeds
+  </Card>
+  <Card title="Mix & Match" icon="layer-group">
+    Combine multiple block types in a single digest
+  </Card>
+</CardGroup>
+
+<Note>
+You can create multiple blocks of the same type within one digest. This is useful for grouping different sources or applying different custom instructions.
+</Note>
+
+## Reading Your Digests
+
+<Columns cols={2}>
+  <Card title="Email Delivery" icon="inbox" horizontal href="/reading/email">
+    Digests are automatically sent to your email inbox at the scheduled time. Read them in any email client.
+  </Card>
+  <Card title="Web Reader" icon="browser" horizontal href="/reading/web">
+    Access all your digests at summate.io/v2 for a better reading experience with full control over presentation.
+  </Card>
+</Columns>
+
+<Tip>
+For the best reading experience, use the web reader. Email clients can be restrictive in how they display content, while the web reader gives you full access to all features and formatting.
+</Tip>
+
+## Activating Digests
+
+<Warning>
+By default, new digests are created in **draft** state. You must activate them before they start sending.
+</Warning>
+
+When you're ready to start receiving a digest:
+1. Review your digest settings and blocks
+2. Click the **Activate** button
+3. Your first digest will be generated at the next scheduled time
+
+## Organization Patterns
+
+Here are some common ways to organize your digests:
+
+<AccordionGroup>
+  <Accordion title="By Topic" icon="tags">
+    Create separate digests for different interests or areas:
+    - **Tech News** - Daily at 8 AM with AI, development, and startup sources
+    - **Market Updates** - Weekdays at 6 AM with finance and business sources
+    - **Weekend Reads** - Saturdays at 10 AM with long-form articles and essays
+  </Accordion>
+
+  <Accordion title="By Purpose" icon="bullseye">
+    Organize based on when and why you read:
+    - **Morning Brief** - Everything important to start your day
+    - **Weekly Roundup** - Comprehensive review of the week's content
+    - **Learning Digest** - Educational content on specific skills
+  </Accordion>
+
+  <Accordion title="By Source Type" icon="folder">
+    Group similar content types together:
+    - **Newsletter Digest** - All email subscriptions in one place
+    - **YouTube Catchup** - Video summaries from channels you follow
+    - **Blog Reader** - RSS feeds from favorite blogs
+  </Accordion>
+</AccordionGroup>
 
 ## Managing Digests
 
-From your dashboard:
-- **Pause** - Temporarily stop delivery
-- **Duplicate** - Copy settings for similar digest
-- **Archive** - Keep settings but hide from active list
-- **Delete** - Permanently remove
+Control your digests from the dashboard:
+
+<CardGroup cols={3}>
+  <Card title="Pause/Resume" icon="pause">
+    Temporarily stop delivery without losing your settings
+  </Card>
+  <Card title="Edit" icon="pen-to-square">
+    Modify blocks, schedule, or custom instructions anytime
+  </Card>
+  <Card title="Delete" icon="trash">
+    Permanently remove a digest you no longer need
+  </Card>
+</CardGroup>
 
 ## Best Practices
 
-1. **Start simple** - Create one focused digest first
-2. **Test timing** - Adjust based on when you actually read
-3. **Group related content** - Keep each digest focused
-4. **Use preview** - Test changes before committing
-5. **Review weekly** - Refine sources and timing
+<CardGroup cols={2}>
+  <Card title="Start Focused" icon="bullseye">
+    Create one specific digest first, then expand as you learn what works
+  </Card>
+  <Card title="Test Timing" icon="clock">
+    Adjust delivery times based on when you actually read your digests
+  </Card>
+  <Card title="Use Custom Instructions" icon="wand-magic-sparkles">
+    Leverage [AI features](/concepts/ai-features) to personalize summaries
+  </Card>
+  <Card title="Review Regularly" icon="rotate">
+    Check your digests weekly to refine sources and settings
+  </Card>
+</CardGroup>
 
 ## Next Steps
-- Learn about [Blocks](/concepts/blocks) to add content
-- Understand [Sources](/concepts/sources) for content input
-- Explore [Reading options](/reading/email) for consuming digests
+
+<CardGroup cols={3}>
+  <Card title="Add Blocks" icon="cube" href="/concepts/blocks">
+    Learn how to add content blocks to your digest
+  </Card>
+  <Card title="Manage Sources" icon="rss" href="/concepts/sources">
+    Understand how to add and organize content sources
+  </Card>
+  <Card title="AI Features" icon="sparkles" href="/concepts/ai-features">
+    Customize how AI summarizes your content
+  </Card>
+</CardGroup>

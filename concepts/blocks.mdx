@@ -4,138 +4,201 @@ icon: cube
 description: Understanding content blocks - the building units of your digests
 ---
 
-Blocks are modular content sections within your digests. Each block connects to specific source types and can be independently configured for optimal content presentation.
+Blocks are the building units of your digests. Each block pulls content from specific sources and generates AI summaries based on your custom instructions.
+
+<Frame>
+  <img src="/images/blocks-builder.png" alt="Example of blocks in the digest builder" />
+</Frame>
 
 ## What are Blocks?
 
-Think of blocks as content containers. Each digest can have multiple blocks, and each block pulls from different sources. This modular approach lets you mix newsletters, YouTube videos, and RSS feeds in a single digest while maintaining control over how each type is summarized.
+Think of blocks as content sections within your digest. Each digest is composed of multiple blocks, and each block can pull from different sources. This modular approach lets you mix newsletters, YouTube videos, and RSS feeds in a single digest while customizing how each section is summarized.
+
+<Info>
+You can create multiple blocks of the same type within a digest. This is useful for grouping different sources or applying different custom instructions to each group.
+</Info>
 
 ## Block Types
 
-### 📧 Newsletter Blocks
-Pull content from email newsletters and subscriptions.
+### Email Block
 
-**Setup:**
-1. Forward newsletters to your AI inbox: `username@inbox.summate.io`
-2. Summate auto-discovers and categorizes newsletters
-3. Select which senders to include in this block
+Pull content from newsletters received in your [Summate Inbox](/concepts/inbox).
 
-**Features:**
-- Smart sender detection (newsletter vs transactional)
-- Archive access for past newsletters
-- Automatic approval for known publishers
+<Frame>
+  <img src="/images/blocks/email-block.png" alt="Email block configuration showing sender selection" />
+</Frame>
 
-### 📺 YouTube Blocks
-Summarize videos from channels you follow.
+<Steps>
+  <Step title="Set Up Your Inbox">
+    Set up your [Summate Inbox](/concepts/inbox) and forward newsletters to it
+  </Step>
+  <Step title="Create Email Block">
+    Add an Email block to your digest
+  </Step>
+  <Step title="Select Senders">
+    Choose which email senders to include
+  </Step>
+</Steps>
 
-**Setup Options:**
-- Paste channel URLs directly
-- Search by channel name
-- Bulk import from connected YouTube account
+**Source Selection**
 
-**Configuration:**
-- Video count and recency filters
-- Duration filters (skip shorts or long videos)
-- Type filters (exclude livestreams, premieres)
+The block displays all **Active** email senders that have been received in your Inbox. Blocked senders are not shown.
 
-**Output Features:**
-- Timestamped highlights
-- Key takeaways with timecodes
-- Visual markers at important moments
+<Tip>
+Use the **"Include All"** option if you're just starting out. This automatically includes all newsletters received in your Inbox, making it easy to get started without manual selection.
+</Tip>
 
-### 📰 RSS Blocks
-Aggregate content from blogs, news sites, and RSS/Atom feeds.
+**Content Processing**
+- Only new emails since your last digest are included
+- Inactive sources (no new content) won't appear in the digest
+- Each email is summarized with a TLDR and key takeaways (learn about [AI summarization](/concepts/ai-features))
 
-**Adding Sources:**
-- Enter website URL (auto-detects feed)
-- Direct RSS/Atom URL input
-- Browse popular sources by category
+### YouTube Block
 
-**Advanced Options:**
-- Full text extraction
-- Category and author filtering
-- Image inclusion settings
+Summarize videos from YouTube channels you follow.
 
-## Customizing Summaries
+<Frame>
+  <img src="/images/blocks/youtube-block.png" alt="YouTube block configuration showing channel selection and filters" />
+</Frame>
 
-### Summary Formats
+**Adding Channels**
 
-**Quick Scan** (30 seconds/item)
-- 2-3 bullet points
-- Just essentials
-- Best for daily news
+<CardGroup cols={2}>
+  <Card title="One-Click Import" icon="download">
+    Connect your YouTube account to import all your subscriptions at once
+  </Card>
+  <Card title="Manual Entry" icon="link">
+    Paste channel URLs directly to add specific channels
+  </Card>
+</CardGroup>
 
-**Balanced** (1-2 minutes/item)
-- AI paragraph + key takeaways
-- Default for most users
-- Good detail/time ratio
+**Filters**
+- **Filter Shorts** - Exclude YouTube Shorts from your digest
+- Videos are automatically filtered if transcripts can't be retrieved (blocked videos)
 
-**Deep Dive** (3-5 minutes/item)
-- Extended summaries
-- All takeaways + quotes
-- Perfect for research
+**Content Processing**
+- Only new videos since your last digest are included
+- Inactive channels (no new videos) won't appear in the digest
+- Each video is summarized with key takeaways linked to relevant timestamps (learn about [AI summarization](/concepts/ai-features))
 
-### Per-Block Settings
+<Note>
+Click on any key takeaway to jump directly to the relevant timestamp in the video. Perfect for skipping to the parts that matter most to you.
+</Note>
 
-Control each block independently:
+### RSS Block
 
-**Content Focus**
-- Keywords to emphasize
-- Topics to skip
-- Relevance scoring (1-10 scale)
+Aggregate content from blogs, news sites, and any website with an RSS feed.
 
-**Tone Options**
-- Professional (formal, fact-focused)
-- Conversational (friendly, accessible)
-- Technical (detailed, precise)
-- Simple (ELI5 explanations)
+<Frame>
+  <img src="/images/blocks/rss-block.png" alt="RSS block configuration showing feed sources" />
+</Frame>
 
-**Smart Filtering**
-- Minimum relevance scores
-- Duplicate detection
-- Content age limits
+**Adding Sources**
 
-## Block Organization
+Enter a website URL and Summate will try to automatically find the RSS feed.
 
-### Ordering Blocks
-Blocks appear in your digest in the order you arrange them. Common patterns:
+<Tip>
+If automatic detection doesn't work, find the RSS feed URL yourself (usually something like `website.com/feed` or `website.com/rss`) and paste it directly.
+</Tip>
 
-1. **Priority Order**: Most important sources first
-2. **Source Type**: All newsletters, then YouTube, then RSS
-3. **Topic Grouping**: Related content together
-4. **Time Investment**: Quick reads first, deep dives last
+**Content Filtering**
+
+By default, we filter out very short content (less than 10 words) to ensure you only get substantial articles and posts.
+
+**Content Processing**
+- Only new content since your last digest is included
+- Inactive sources (no new posts) won't appear in the digest
+- Each article is summarized with a TLDR and key takeaways (learn about [AI summarization](/concepts/ai-features))
+
+<Note>
+Click on any key takeaway to jump to the exact paragraph in the original article where that information appears.
+</Note>
+
+## Customizing Blocks
+
+### Block Settings
+
+<CardGroup cols={2}>
+  <Card title="Block Name" icon="tag">
+    Give your block a descriptive name to stay organized (e.g., "AI Newsletters", "Tech YouTube")
+  </Card>
+  <Card title="Custom Instructions" icon="wand-magic-sparkles" href="/concepts/ai-features#customization-levels">
+    Add block-level custom instructions to personalize how AI summarizes this specific block's content
+  </Card>
+</CardGroup>
+
+### Summarization Mode
+
+Currently, all blocks use **Detailed Summaries**, which provide:
+- **TLDR** - A brief overview of the content
+- **Key Takeaways** - Specific points relevant to your custom instructions
+
+<Note>
+We plan to add topic-based grouping to organize your summaries by themes and subjects automatically.
+</Note>
+
+Learn more about customizing AI summaries in our [AI Features guide](/concepts/ai-features).
+
+## Organizing Blocks
+
+### Block Order
+
+Use the up/down arrows to reorder blocks within your digest. Blocks appear in your digest in the order you arrange them.
+
+<AccordionGroup>
+  <Accordion title="Common Organization Patterns" icon="list">
+    **Priority Order**
+    - Most important sources first
+    - Time-sensitive content at the top
+
+    **Source Type Grouping**
+    - All newsletters together
+    - Then YouTube videos
+    - Then RSS feeds
+
+    **Topic-Based Organization**
+    - Group related content together
+    - Separate work vs. personal interests
+
+    **Reading Time**
+    - Quick reads first
+    - Longer content at the end
+  </Accordion>
+</AccordionGroup>
 
 ### Block Limits
-- Maximum 10 blocks per digest
-- No limit on sources per block
-- Each block processes independently
 
-## Advanced Features
-
-### Cross-Block Deduplication
-When enabled, Summate identifies similar stories across blocks and consolidates them, showing the most comprehensive version.
-
-### Block Templates
-Save block configurations as templates for reuse:
-- "Tech News" template with favorite tech RSS feeds
-- "Industry Newsletters" with approved senders
-- "Learning Videos" with educational YouTube channels
-
-### Conditional Blocks
-Set blocks to only appear when content meets criteria:
-- Minimum item count
-- Relevance threshold
-- Specific keywords present
+<Info>
+There's no hard limit on the number of blocks per digest. However, keep in mind your monthly credit allocation (2000 credits) when planning your digests. Each newsletter/article costs 1 credit, and videos cost 1-3 credits depending on length.
+</Info>
 
 ## Best Practices
 
-1. **Start with 2-3 blocks** - Add more as you refine
-2. **Group similar sources** - All newsletters in one block
-3. **Test summary lengths** - Find your ideal detail level
-4. **Review weekly** - Remove inactive sources
-5. **Use relevance filters** - Quality over quantity
+<CardGroup cols={2}>
+  <Card title="Start Small" icon="seedling">
+    Begin with 2-3 blocks and expand as you understand what works for you
+  </Card>
+  <Card title="Name Descriptively" icon="tag">
+    Use clear block names like "AI Research" or "Morning Tech News" for easy identification
+  </Card>
+  <Card title="Use Custom Instructions" icon="wand-magic-sparkles" href="/concepts/ai-features#customization-levels">
+    Apply block-level instructions to personalize summaries for different content types
+  </Card>
+  <Card title="Review Regularly" icon="calendar">
+    Check your digests weekly to add new sources and remove inactive ones
+  </Card>
+</CardGroup>
 
 ## Next Steps
-- Explore [Sources](/concepts/sources) to add content
-- Learn about [Digests](/concepts/digests) structure
-- Configure your [Inbox](/concepts/inbox) for newsletters
+
+<CardGroup cols={3}>
+  <Card title="Learn About Digests" icon="newspaper" href="/concepts/digests">
+    Understand how digests work
+  </Card>
+  <Card title="Set Up Your Inbox" icon="inbox" href="/concepts/inbox">
+    Configure email forwarding for newsletters
+  </Card>
+  <Card title="AI Customization" icon="sparkles" href="/concepts/ai-features">
+    Personalize your summaries
+  </Card>
+</CardGroup>
