@@ -1,199 +1,165 @@
 ---
 title: Sources
 icon: rss
-description: How to add and manage content sources in Summate
+description: Understanding and managing your content sources
 ---
 
-Sources are the content feeds that power your digests. Summate supports newsletters, YouTube channels, RSS feeds, and more.
+Sources are the individual content providers within your [blocks](/concepts/blocks) - each YouTube channel, RSS blog, or email sender that you add to create your digests.
+
+<Info>
+  **Email sources** are managed through your [Inbox](/concepts/inbox) - all
+  received newsletters are automatically available as sources. **YouTube and RSS
+  sources** are added directly when you create blocks in your digest.
+</Info>
+
+## What are Sources?
+
+A source is a specific content provider:
+
+- **Email source** - A particular newsletter sender (e.g., "Morning Brew")
+- **YouTube source** - A specific channel (e.g., "Fireship")
+- **RSS source** - A blog or website with an RSS feed (e.g., "TechCrunch")
+
+Each [block](/concepts/blocks) in your digest pulls content from the sources you've selected for that block.
 
 ## Source Types
 
-### 📧 Newsletters
-Email newsletters from Substack, ConvertKit, Mailchimp, and any email platform.
+### Email Sources
+
+Email newsletters from any platform - Substack, Beehiiv, ConvertKit, Mailchimp, or any email-based newsletter.
 
 **How to add:**
-- Forward to your AI inbox
-- Direct subscribe via Summate
-- Import from email account
 
-### 📺 YouTube Channels
-Video content from creators and channels you follow.
+1. Set up your [Summate Inbox](/concepts/inbox)
+2. Forward newsletters to your inbox (see our [auto-forwarding guide](/guides/auto-forwarding))
+3. New senders appear in your Inbox and are automatically available as sources
+4. Add senders to Email blocks
+5. Block spam senders with one click if needed
+
+**Management:**
+
+- **Active sources** - Senders available to add to blocks (default for all received newsletters)
+- **Blocked sources** - Spam senders you've blocked with one click
+- Manage senders through your [Inbox](/concepts/inbox)
+
+### YouTube Sources
+
+Individual YouTube channels you want to follow.
 
 **How to add:**
-- Paste channel URL
-- Search by channel name
-- Bulk import subscriptions
 
-### 📰 RSS/Atom Feeds
-Blogs, news sites, podcasts, and any RSS-compatible source.
+1. Create a YouTube block in your digest
+2. Connect your YouTube account for one-click import of all subscriptions
+3. Or paste channel URLs directly
+
+**Management:**
+
+- Filter out Shorts if desired
+- Videos with unavailable transcripts are automatically filtered
+
+<Note>
+  We plan to add more management tools for YouTube sources in the future.
+</Note>
+
+### RSS Sources
+
+Blogs, news sites, and any website with an RSS feed.
 
 **How to add:**
-- Enter website URL (auto-detects feed)
-- Paste RSS feed URL directly
-- Import OPML file
 
-### 🔗 Coming Soon
-- Twitter/X threads
-- LinkedIn posts
-- Podcast transcripts
-- Reddit communities
+1. Create an RSS block in your digest
+2. Enter a website URL - Summate tries to auto-detect the RSS feed
+3. Or paste the RSS feed URL directly if auto-detection doesn't work
 
-## Adding Sources
+**Management:**
 
-### Quick Add Methods
+- Short content (less than 10 words) is automatically filtered
 
-**Universal Search**
-1. Click "Add Source" in any block
-2. Type name or URL
-3. Select from results
-4. Added instantly
+<Note>We plan to add more management tools for RSS sources in the future.</Note>
 
-**Paste URLs**
-Drop any link:
-- Newsletter signup pages
-- YouTube channels
-- Blog homepages
-- Direct RSS feeds
+## Managing Email Sources
 
-**Bulk Import**
-- **Email**: Connect Gmail/Outlook to detect subscriptions
-- **YouTube**: Import all subscribed channels
-- **OPML**: Upload from feed readers
+Email sources have the most management tools available for controlling what appears in your digests.
 
-### AI Inbox Setup
+### Managing Senders
 
-Your unique forwarding address: `username@inbox.summate.io`
+When a new newsletter arrives in your [Summate Inbox](/concepts/inbox), it's automatically available as a source.
 
-**Setting up forwarding:**
+<Steps>
+  <Step title="Review Your Inbox">
+    Check your [Inbox](/concepts/inbox) for newsletter senders
+  </Step>
+  <Step title="Add to Blocks">Add senders to Email blocks in your digests</Step>
+  <Step title="Block Spam">
+    If spam newsletters appear, block them with one click
+  </Step>
+</Steps>
 
-**Gmail:**
-1. Settings → Forwarding and POP/IMAP
-2. Add forwarding address
-3. Create filter for newsletters
-4. Forward to AI inbox
+<Tip>
+  Focus on quality newsletters. If low-value content makes it through your
+  forwarding filters, block those senders immediately to keep your Inbox clean.
+</Tip>
 
-**Outlook:**
-1. Settings → Rules
-2. Create new rule
-3. Condition: From specific senders
-4. Action: Forward to AI inbox
+### Source States
 
-**Apple Mail:**
-1. Preferences → Rules
-2. Add Rule
-3. Set conditions
-4. Forward to AI inbox
+- **Active** - All newsletter senders received in your Inbox (default state)
+- **Blocked** - Spam senders you've blocked that won't appear in your digests or Inbox
 
-## Managing Sources
+## Source Quality
 
-### Source Library
-Central place for all your sources:
-- Search and filter options
-- Usage statistics
-- Quick enable/disable
-- Bulk operations
-
-### Approval Queue
-For newsletter sources:
-- New senders appear here
-- One-click approve/block
-- Set auto-approval rules
-- Domain-level controls
-
-### Source Settings
-
-**Per-source controls:**
-- Inclusion frequency
-- Summary detail level
-- Keyword filters
-- Date range limits
-
-**Smart Filtering:**
-- Minimum quality score
-- Duplicate detection
-- Language preferences
-- Content type filters
-
-## Organization Tips
-
-### Categorization
-Group sources by:
-- Topic (Tech, Finance, Health)
-- Format (Daily, Weekly, Monthly)
-- Priority (Must-read, Optional)
-- Purpose (Work, Learning, Entertainment)
-
-### Source Hygiene
-Regular maintenance:
-1. **Weekly**: Review approval queue
-2. **Monthly**: Remove inactive sources
-3. **Quarterly**: Audit source quality
-4. **Yearly**: Fresh start evaluation
-
-### Discovery Features
-
-**Trending Sources**
-Popular sources in your interest areas
-
-**Recommended for You**
-Based on your current sources
-
-**Curated Collections**
-Expert-picked source bundles:
-- "Tech Essentials"
-- "Business Morning Brief"
-- "Creative Inspiration"
-
-## Advanced Features
-
-### Source Scoring
-Summate tracks:
-- Content quality
-- Publishing frequency
-- Your engagement
-- Community ratings
-
-### Conditional Sources
-Include only when:
-- New content available
-- Matches keywords
-- Reaches quality threshold
-- Published recently
-
-### Source Shortcuts
-Save time with:
-- Quick subscribe links
-- One-click bundles
-- Share source lists
-- Export configurations
+<Warning>
+  We recommend monitoring high-quality sources only, not spam or low-value
+  content. Quality sources lead to better digests and more efficient use of your
+  AI credits.
+</Warning>
 
 ## Best Practices
 
-1. **Start selective** - Add 5-10 quality sources
-2. **Use the inbox** - Forward existing subscriptions
-3. **Review weekly** - Prune low-value sources
-4. **Mix formats** - Combine text and video
-5. **Set boundaries** - Limit sources per digest
+<CardGroup cols={2}>
+  <Card title="Start Small" icon="seedling">
+    Begin with 5-10 high-quality sources per block and expand gradually
+  </Card>
+  <Card title="Review Regularly" icon="calendar-check">
+    Check your Inbox weekly and remove inactive sources monthly
+  </Card>
+  <Card title="Be Selective" icon="filter">
+    Block low-quality senders immediately to keep your Inbox clean
+  </Card>
+  <Card title="Organize by Block" icon="layer-group">
+    Group related sources together in the same block for better organization
+  </Card>
+</CardGroup>
 
 ## Troubleshooting
 
-### Newsletters Not Appearing
-- Check spam folder for confirmation
-- Verify forwarding address
-- Review approval queue
-- Check AI inbox address
+<AccordionGroup>
+  <Accordion title="Newsletters not appearing in Inbox" icon="envelope">
+    If newsletters aren't showing up, check the [Inbox page](/concepts/inbox) for common troubleshooting patterns and setup guidance.
+  </Accordion>
 
-### YouTube Issues
-- Reauthorize connection
-- Check channel availability
-- Verify video recency settings
+{" "}
+<Accordion title="YouTube channels not showing videos" icon="youtube">
+  - Verify the channel is actively publishing new content - Check if videos have
+  transcripts available (videos without transcripts are filtered)
+</Accordion>
 
-### RSS Problems
-- Validate feed URL
-- Check site availability
-- Try alternate feed finder
+  <Accordion title="RSS feeds not updating" icon="rss">
+    - Verify the website still has an active RSS feed
+    - Try finding and entering the RSS feed URL directly
+    - Check if the website is still publishing new content
+  </Accordion>
+</AccordionGroup>
 
 ## Next Steps
-- Configure [Blocks](/concepts/blocks) with your sources
-- Set up your [Inbox](/concepts/inbox)
-- Create your first [Digest](/concepts/digests)
+
+<CardGroup cols={3}>
+  <Card title="Set Up Inbox" icon="inbox" href="/concepts/inbox">
+    Configure your email forwarding
+  </Card>
+  <Card title="Create Blocks" icon="cube" href="/concepts/blocks">
+    Add sources to your blocks
+  </Card>
+  <Card title="Build Digests" icon="newspaper" href="/concepts/digests">
+    Create your first digest
+  </Card>
+</CardGroup>
