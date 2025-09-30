@@ -1,51 +1,208 @@
 ---
 description: Documentation Base
-globs: 
+globs:
 ---
 
-# Mintlify documentation
+# Summate Documentation Guidelines
 
-## Working relationship
-- You can push back on ideas-this can lead to better documentation. Cite sources and explain your reasoning when you do so
-- ALWAYS ask for clarification rather than making assumptions
-- NEVER lie, guess, or make up information
+## Core Principle: Accuracy First
 
-## Project context
-- Format: MDX files with YAML frontmatter
-- Config: docs.json for navigation, theme, settings
-- Components: Mintlify components
+**ONLY document features that currently exist.** Remove or mark as "coming soon" anything that's planned but not built.
 
-## Content strategy
-- Document just enough for user success - not too much, not too little
-- Prioritize accuracy and usability of information
-- Make content evergreen when possible
-- Search for existing information before adding new content. Avoid duplication unless it is done for a strategic reason
-- Check existing patterns for consistency
-- Start by making the smallest reasonable changes
+If you're unsure whether a feature exists, ask. Never assume or guess.
 
-## Frontmatter requirements for pages
-- title: Clear, descriptive page title
-- description: Concise summary for SEO/navigation
+## Working Relationship
 
-## Writing standards
-- Second-person voice ("you")
-- Prerequisites at start of procedural content
-- Test all code examples before publishing
-- Match style and formatting of existing pages
-- Include both basic and advanced use cases
-- Language tags on all code blocks
-- Alt text on all images
-- Relative paths for internal links
+- **Push back when needed** - Better documentation comes from questioning assumptions. Cite sources and explain your reasoning.
+- **Ask for clarification** - Always ask rather than making assumptions about features, behavior, or terminology.
+- **Never lie or guess** - If you don't know, say so. User will provide accurate information.
+- **Verify with user** - When documenting technical behavior, confirm accuracy with user before publishing.
 
-## Git workflow
-- NEVER use --no-verify when committing
-- Ask how to handle uncommitted changes before starting
-- Create a new branch when no clear branch exists for changes
-- Commit frequently throughout development
-- NEVER skip or disable pre-commit hooks
+## Project Context
 
-## Do not
-- Skip frontmatter on any MDX file
-- Use absolute URLs for internal links
-- Include untested code examples
-- Make assumptions - always ask for clarification
+- **Format:** MDX files with YAML frontmatter
+- **Config:** mint.json for navigation, theme, settings
+- **Components:** Mintlify components (see Component Standards below)
+- **Platform:** Mintlify documentation platform
+- **Codebase:** `/Users/raduan/Desktop/projects/summate-docs/`
+
+## Content Strategy
+
+### What to Document
+- Current features and actual behavior
+- Setup workflows and common tasks
+- Troubleshooting for real issues users face
+- Conceptual understanding of how things work
+
+### What NOT to Document
+- Planned features (unless explicitly marked as "coming soon")
+- Speculative use cases that don't match current product
+- Overly detailed technical implementation
+- Features mentioned in old docs but removed from product
+
+### Documentation Principles
+- **Just enough** - Not too much, not too little. Match detail level to user needs.
+- **Accuracy over completeness** - Better to have less content that's 100% accurate than more content with errors.
+- **Evergreen content** - Write for longevity. Avoid time-specific language unless necessary.
+- **No duplication** - Search existing docs before adding new content. Link instead of repeating.
+- **Consistency** - Check existing patterns and match the style, structure, and terminology.
+- **Small changes** - Start with minimal edits. You can always expand later.
+
+## Mintlify Component Standards
+
+Use these components consistently throughout the docs:
+
+### Visual Components
+- **`<Frame>` + `<img>`** - Wrap all images/screenshots in Frame for visual separation
+- **`<CardGroup>` + `<Card>`** - For features, navigation, best practices (use `cols={2}` or `cols={3}`)
+- **`<Columns>`** - For side-by-side content (less common than CardGroup)
+
+### Interactive Components
+- **`<Tabs>` + `<Tab>`** - For alternative approaches or platform-specific instructions
+- **`<AccordionGroup>` + `<Accordion>`** - For FAQs and collapsible sections
+- **`<Steps>` + `<Step>`** - For sequential processes (auto-numbered)
+
+### Callout Components
+- **`<Info>`** - General helpful information
+- **`<Tip>`** - Best practices and recommendations
+- **`<Warning>`** - Important cautions (use sparingly)
+- **`<Note>`** - Supplementary information
+
+### When to Use Each
+- **Steps:** Any sequential process (setup, configuration, workflow)
+- **Tabs:** Alternative methods (Gmail vs Outlook, auto-forwarding vs direct subscription)
+- **Cards:** Feature highlights, navigation blocks, best practices
+- **Accordions:** FAQs, optional details, reducing page length
+- **Callouts:** Emphasize important info (but don't overuse)
+
+### Component Anti-Patterns
+- Don't nest complex components (keep it simple)
+- Don't use callouts for every paragraph (use sparingly)
+- Don't create custom components when Mintlify has built-ins
+- Don't use `<CodeBlock>` component (causes styling issues in light mode)
+
+## Page Structure Standards
+
+### Frontmatter (Required)
+```yaml
+---
+title: Clear, Descriptive Page Title
+icon: icon-name (optional but recommended)
+description: Concise SEO-friendly summary (1-2 sentences)
+---
+```
+
+### Page Flow Pattern
+1. **Brief intro** - What is this? (1-2 paragraphs)
+2. **Hero image** (if applicable) - Screenshot showing the feature
+3. **Main content** - Sections with clear headers
+4. **Visual breaks** - Use components to make it scannable
+5. **Next steps** - Cards linking to related pages
+
+### Linking Strategy
+- **Link generously** - Connect related concepts throughout docs
+- **Use descriptive link text** - Not "click here", but "learn about [concept]"
+- **Relative paths** - `/concepts/digests` not `https://docs.summate.io/concepts/digests`
+- **Verify links work** - Test all internal links
+
+## Writing Standards
+
+### Voice & Tone
+- **Second person** - "You" and "your", not "we" or "the user"
+- **Active voice** - "Click the button" not "the button should be clicked"
+- **Conversational but professional** - Friendly without being cutesy
+- **Concise** - Respect the reader's time. Be clear and brief.
+
+### Terminology
+- **Avoid jargon** - "Stored securely" not "encrypted at rest"
+- **Be specific** - "Inbox" not "approval queue"
+- **Match product UI** - Use exact terms from the app
+- **Stay consistent** - Once you establish a term, stick with it
+
+### Common Term Definitions
+- **Digest:** Time-based content report delivered on schedule
+- **Block:** Content section within a digest (Email, YouTube, RSS)
+- **Source:** Individual provider (newsletter sender, YouTube channel, blog)
+- **Inbox:** User's personal email address for receiving newsletters
+- **Active/Blocked:** Sender states (approved by default, can be blocked)
+
+### Examples & Use Cases
+- Include real-world examples ("Morning Tech Brief", "TLDR newsletter")
+- Show both basic and advanced scenarios
+- Use actual product screenshots (via placeholder paths)
+
+### Images
+- **Always use Frame** - Wrap all images in `<Frame>` component
+- **Descriptive alt text** - Explain what the image shows
+- **Strategic placement** - After section headers for immediate context
+- **Placeholder paths** - `/images/section/descriptive-name.png`
+
+## Navigation Structure (mint.json)
+
+Current structure:
+```
+- Getting Started (quickstart, faq)
+- Concepts (digests, blocks, sources, inbox, ai-features)
+- Reading (web, email)
+- Guides (auto-forwarding)
+- Settings (account)
+```
+
+When adding pages:
+1. Add to appropriate section
+2. Use descriptive icons
+3. Maintain logical flow (concepts before usage)
+4. Update CLAUDE.md if structure changes significantly
+
+## Git Workflow
+
+### Committing Changes
+- **NEVER use `--no-verify`** - Pre-commit hooks are there for a reason
+- **Ask about uncommitted changes** - Before starting, ask user how to handle existing changes
+- **Create branches** - If no clear branch exists for changes
+- **Commit frequently** - Small, logical commits throughout work
+- **NEVER skip hooks** - Hooks catch issues before they're published
+
+### Commit Messages
+Follow the project's commit message style (check `git log` for patterns).
+
+## Quality Checklist
+
+Before considering a page "done":
+
+- [ ] Frontmatter is complete (title, description, icon)
+- [ ] All information is factually accurate (verified with user)
+- [ ] No planned/speculative features documented (unless marked "coming soon")
+- [ ] Mintlify components used appropriately
+- [ ] Images have descriptive alt text
+- [ ] Internal links use relative paths and work correctly
+- [ ] Terminology matches product UI and is consistent
+- [ ] Writing is concise, clear, and in second person
+- [ ] Visual hierarchy is good (not a wall of text)
+- [ ] Links to related concepts are included
+- [ ] Page fits logically in the documentation structure
+
+## Common Pitfalls to Avoid
+
+1. **Documenting non-existent features** - Always verify with user first
+2. **Using technical jargon** - Simplify language for users
+3. **Creating walls of text** - Use components to break up content
+4. **Inconsistent terminology** - Check how terms are used elsewhere
+5. **Broken internal links** - Always use correct relative paths
+6. **Missing context** - Don't assume users have read other pages
+7. **Over-explaining** - Trust users to understand. Link for depth.
+8. **Absolute URLs** - Use relative paths for internal links
+9. **Skipping frontmatter** - Every MDX file needs title and description
+10. **Forgetting alt text** - All images need descriptive alt text
+
+## When Stuck
+
+1. **Read related pages** - See how similar concepts are documented
+2. **Ask the user** - Clarify unclear behavior or terminology
+3. **Check existing patterns** - Maintain consistency with established style
+4. **Start simple** - Make minimal changes first, expand as needed
+5. **Reference this guide** - Come back to these principles
+
+---
+
+**Remember:** Better to ask and get it right than to guess and be wrong. Accuracy is more important than speed.
