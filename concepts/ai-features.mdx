@@ -1,0 +1,97 @@
+---
+title: AI Features
+icon: sparkles
+description: Understanding how Summate uses AI to summarize and personalize your content
+---
+
+Summate uses AI to transform hours of reading into digestible summaries tailored to your interests. Our AI continuously monitors your sources and creates personalized summaries based on your custom instructions.
+
+## How AI Summarization Works
+
+We continuously monitor new content from your sources. Before sending out your digest, our AI processes each piece of content according to your custom instructions, extracting what matters most to you.
+
+## Customization Levels
+
+You can customize how AI summarizes your content at three different levels:
+
+### Block Level Custom Instructions
+Applied only to a specific block within your digest.
+
+**Use case:** You want different summarization approaches for different content types.
+
+**Example:** "Focus on actionable insights and code examples" for a technical newsletter block, while using "Highlight market trends and predictions" for a business news block.
+
+### Digest Level Custom Instructions
+Applied to all blocks within a single digest.
+
+**Use case:** You want consistent summarization across all content in a particular digest.
+
+**Example:** "Summarize everything with a focus on AI and machine learning applications" for your morning tech digest.
+
+### Account Level User Context
+Applied across all digests in your account.
+
+**Use case:** You want to provide general context about yourself that influences all summaries.
+
+**Example:** "I'm a software engineer interested in developer tools, productivity, and AI" - this helps the AI understand what's relevant to you across all your digests.
+
+<Info>
+Custom instructions at different levels work together. The AI considers account-level context first, then applies digest-level instructions, and finally block-level instructions for the most specific guidance.
+</Info>
+
+## Summarization Modes
+
+### Detailed Summaries
+
+Currently available for all content types. Detailed summaries provide:
+
+- **TLDR** - A brief overview of the entire piece
+- **Key Takeaways** - Specific points relevant to your custom instructions
+
+#### Interactive References
+
+Detailed summaries include clickable references that take you directly to the source:
+
+<Tabs>
+  <Tab title="Newsletters & RSS">
+    Click on any key takeaway to jump to the exact paragraph in the original article where that information appears. Perfect for verifying context or diving deeper into specific points.
+  </Tab>
+  <Tab title="YouTube Videos">
+    Each key takeaway links to the most relevant timestamp in the video. Skip directly to the moment when that topic is discussed, saving you time scanning through long videos.
+  </Tab>
+</Tabs>
+
+<Note>
+Additional summarization modes (quick scan, key points only) are planned for future release. These will give you more control over summary length and detail level.
+</Note>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Be Specific" icon="bullseye">
+    Instead of "tech news," try "focus on AI developments in healthcare and their practical applications"
+  </Card>
+  <Card title="Iterate" icon="rotate">
+    Adjust your instructions based on the summaries you receive. Fine-tune over time for better results
+  </Card>
+  <Card title="Layer Instructions" icon="layer-group">
+    Use account-level for general context, digest-level for theme, and block-level for specific needs
+  </Card>
+  <Card title="Test Different Approaches" icon="flask">
+    Try different instruction styles to see what works best for your content types
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<CardGroup cols={3}>
+  <Card title="Create Digests" icon="newspaper" href="/concepts/digests">
+    Learn how to build your digests
+  </Card>
+  <Card title="Add Blocks" icon="cube" href="/concepts/blocks">
+    Understand content blocks
+  </Card>
+  <Card title="Manage Sources" icon="rss" href="/concepts/sources">
+    Configure your content sources
+  </Card>
+</CardGroup>
