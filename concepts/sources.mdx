@@ -1,0 +1,181 @@
+---
+title: Sources
+icon: rss
+description: Understanding and managing your content sources
+---
+
+Sources are the individual content providers within your [blocks](/concepts/blocks) - each YouTube channel, RSS blog, or email sender that you add to create your digests.
+
+<Frame caption="Choose from Email, YouTube, or RSS block types to add sources">
+  <img src="/images/sources/sources-overview.png" alt="Overview of different source types in Summate" />
+</Frame>
+
+<Info>
+  **Email sources** are managed through your [Inbox](/concepts/inbox) - all
+  received newsletters are automatically available as sources. **YouTube and RSS
+  sources** are added directly when you create blocks in your digest.
+</Info>
+
+## What are Sources?
+
+A source is a specific content provider:
+
+- **Email source** - A particular newsletter sender (e.g., "Morning Brew")
+- **YouTube source** - A specific channel (e.g., "Fireship")
+- **RSS source** - A blog or website with an RSS feed (e.g., "TechCrunch")
+
+Each [block](/concepts/blocks) in your digest pulls content from the sources you've selected for that block.
+
+## Source Types
+
+### Email Sources
+
+Email newsletters from any platform - Substack, Beehiiv, ConvertKit, Mailchimp, or any email-based newsletter.
+
+<Frame caption="Manage approved and blocked newsletter senders in your Inbox">
+  <img src="/images/sources/email-sources.png" alt="Email sources in the Inbox showing active and blocked senders" />
+</Frame>
+
+**How to add:**
+
+1. Set up your [Summate Inbox](/concepts/inbox)
+2. Forward newsletters to your inbox (see our [auto-forwarding guide](/guides/auto-forwarding))
+3. New senders appear in your Inbox and are automatically available as sources
+4. Add senders to Email blocks
+5. Block spam senders with one click if needed
+
+**Management:**
+
+- **Active sources** - Senders available to add to blocks (default for all received newsletters)
+- **Blocked sources** - Spam senders you've blocked with one click
+- Manage senders through your [Inbox](/concepts/inbox)
+
+### YouTube Sources
+
+Individual YouTube channels you want to follow.
+
+<Frame caption="Import your YouTube subscriptions or add channels manually">
+  <img src="/images/sources/youtube-sources.png" alt="Adding YouTube channels by importing subscriptions or pasting URLs" />
+</Frame>
+
+**How to add:**
+
+1. Create a YouTube block in your digest
+2. Connect your YouTube account for one-click import of all subscriptions
+3. Or paste channel URLs directly
+
+**Management:**
+
+- Filter out Shorts if desired
+- Videos with unavailable transcripts are automatically filtered
+
+<Note>
+  We plan to add more management tools for YouTube sources in the future.
+</Note>
+
+### RSS Sources
+
+Blogs, news sites, and any website with an RSS feed.
+
+<Frame caption="Import Substack newsletters or add RSS feeds by URL">
+  <img src="/images/sources/rss-sources.png" alt="Adding RSS feeds by entering website URLs" />
+</Frame>
+
+**How to add:**
+
+1. Create an RSS block in your digest
+2. Enter a website URL - Summate tries to auto-detect the RSS feed
+3. Or paste the RSS feed URL directly if auto-detection doesn't work
+
+**Management:**
+
+- Short content (less than 10 words) is automatically filtered
+
+<Note>We plan to add more management tools for RSS sources in the future.</Note>
+
+## Managing Email Sources
+
+Email sources have the most management tools available for controlling what appears in your digests.
+
+### Managing Senders
+
+When a new newsletter arrives in your [Summate Inbox](/concepts/inbox), it's automatically available as a source.
+
+<Steps>
+  <Step title="Review Your Inbox">
+    Check your [Inbox](/concepts/inbox) for newsletter senders
+  </Step>
+  <Step title="Add to Blocks">Add senders to Email blocks in your digests</Step>
+  <Step title="Block Spam">
+    If spam newsletters appear, block them with one click
+  </Step>
+</Steps>
+
+<Tip>
+  Focus on quality newsletters. If low-value content makes it through your
+  forwarding filters, block those senders immediately to keep your Inbox clean.
+</Tip>
+
+### Source States
+
+- **Active** - All newsletter senders received in your Inbox (default state)
+- **Blocked** - Spam senders you've blocked that won't appear in your digests or Inbox
+
+## Source Quality
+
+<Warning>
+  We recommend monitoring high-quality sources only, not spam or low-value
+  content. Quality sources lead to better digests and more efficient use of your
+  AI credits.
+</Warning>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Start Small" icon="seedling">
+    Begin with 5-10 high-quality sources per block and expand gradually
+  </Card>
+  <Card title="Review Regularly" icon="calendar-check">
+    Check your Inbox weekly and remove inactive sources monthly
+  </Card>
+  <Card title="Be Selective" icon="filter">
+    Block low-quality senders immediately to keep your Inbox clean
+  </Card>
+  <Card title="Organize by Block" icon="layer-group">
+    Group related sources together in the same block for better organization
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Newsletters not appearing in Inbox" icon="envelope">
+    If newsletters aren't showing up, check the [Inbox page](/concepts/inbox) for common troubleshooting patterns and setup guidance.
+  </Accordion>
+
+{" "}
+<Accordion title="YouTube channels not showing videos" icon="youtube">
+  - Verify the channel is actively publishing new content - Check if videos have
+  transcripts available (videos without transcripts are filtered)
+</Accordion>
+
+  <Accordion title="RSS feeds not updating" icon="rss">
+    - Verify the website still has an active RSS feed
+    - Try finding and entering the RSS feed URL directly
+    - Check if the website is still publishing new content
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={3}>
+  <Card title="Set Up Inbox" icon="inbox" href="/concepts/inbox">
+    Configure your email forwarding
+  </Card>
+  <Card title="Create Blocks" icon="cube" href="/concepts/blocks">
+    Add sources to your blocks
+  </Card>
+  <Card title="Build Digests" icon="newspaper" href="/concepts/digests">
+    Create your first digest
+  </Card>
+</CardGroup>

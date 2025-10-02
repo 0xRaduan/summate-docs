@@ -1,0 +1,190 @@
+---
+title: Frequently Asked Questions
+icon: circle-question
+description: Common questions about Summate
+---
+
+## Getting Started
+
+### What is Summate?
+
+Summate is an AI-powered content aggregation platform that creates personalized digests from your newsletters, YouTube subscriptions, and web sources. Instead of checking multiple apps and inboxes, you get one intelligently curated digest on your schedule.
+
+### How much does it cost?
+
+We are currently in beta with pricing at **$10/month, billed yearly**. This includes 2000 AI credits per month.
+
+As we add more features and value to Summate, the price will increase over time. We plan to introduce monthly billing in the future, but right now our focus is on early believers who want to lock in the current pricing.
+
+## Digests & Blocks
+
+### What's the difference between a digest and a block?
+
+- **Digest** = What you receive on your schedule (e.g., "Morning Tech Brief")
+- **Block** = A particular piece within your digest (e.g., "AI News" block)
+
+One digest contains multiple blocks, each pulling from different sources.
+
+### Can I create multiple blocks of the same type in a digest?
+
+Yes! This is very helpful when you want to:
+- Group different sources separately
+- Apply different custom instructions to each block
+- Organize content by topic or priority
+
+### How many digests can I create?
+
+You can create unlimited digests! There's no restriction on the number of digests you can set up.
+
+### Can I share digests with others?
+
+Not at the moment, but this is a feature we have in mind and might add in the future. Please [vote for it on our roadmap](https://summate.canny.io) if this is important to you!
+
+## Sources & Content
+
+### What sources does Summate support?
+
+Currently, we support:
+- **Email** - Any email received through your [Inbox](/concepts/inbox)
+- **YouTube** - Videos from any YouTube channel
+- **RSS** - Any blog or website that has an RSS feed
+
+We plan to add more native integrations in the future.
+
+### How do I add newsletters?
+
+To add newsletters to Summate, you'll need to use our Inbox feature. Learn more about [how the Inbox works](/concepts/inbox) and how to forward newsletters to your personal Summate inbox address.
+
+### Can I import existing subscriptions?
+
+Yes! We support importing subscriptions from multiple platforms:
+- **Email newsletters** - Follow our [auto-forwarding guide](/guides/auto-forwarding) to set up automatic forwarding
+- **YouTube** - Connect your YouTube account for one-click import of all your subscriptions
+- **Substack** - Connect your Substack account and we'll fetch all your subscriptions in one click
+
+### What's the difference between Substack connection and email newsletters?
+
+This can be confusing! When you use our Substack import feature, we treat Substack blogs as RSS feeds. This means:
+
+- **Free Substacks** - Work perfectly with the import feature
+- **Paid Substacks** - We can only access the free preview, not the full content
+
+**Recommendation:** If you're subscribed to paid Substacks, set up your [Inbox](/concepts/inbox) and use the [auto-forwarding feature](/guides/auto-forwarding) instead. This way, you'll get the full content of paid newsletters.
+
+## AI & Summarization
+
+### How does AI summarization work?
+
+We continuously monitor new content being produced from your sources. Before we send out your digest, we summarize it according to your custom instructions.
+
+### Can I customize summaries?
+
+Yes! You can customize summaries at three levels:
+
+- **Block level** - Custom instructions applied only to that specific block
+- **Digest level** - Custom instructions applied to all blocks within that digest
+- **Account level** - User context applied across all digests
+
+For more details, see our [AI personalization guide](/concepts/ai).
+
+### What are AI credits?
+
+AI credits are used to process your content:
+- **Newsletters & articles** - 1 credit per item
+- **YouTube videos** - Dynamic pricing (1-3 credits depending on video length)
+- **Monthly allocation** - 2000 credits, resets on the 1st of each month
+
+### Can I purchase more credits?
+
+Not at the moment, but we plan to add this feature. In the meantime, please contact support@summate.io if you need additional credits.
+
+## Technical Questions
+
+### Is my data private?
+
+Yes. We store your data securely and do not sell it to third parties. You can delete your account and all associated data at any time.
+
+### What happens to forwarded emails?
+
+We store forwarded emails securely for up to 1 year. This allows us to:
+- Include them in your digests
+- Render them in the app for a seamless reading experience
+
+Emails are automatically deleted from our systems after 1 year.
+
+### Which email clients work best?
+
+We strive to provide a great reading experience in most email clients. However, the best reading experience is on **Summate Web** (via mobile or desktop), where we have full control over the presentation. Email clients can be restrictive in what they allow.
+
+## Troubleshooting
+
+### Not receiving digests?
+
+First, check if your digests appear in the [Issues tab](https://summate.io/v2/issues). If they're there, we're generating them successfully but they're not being delivered to your inbox.
+
+Please contact support@summate.io to investigate further.
+
+### Newsletters not appearing?
+
+If newsletters aren't showing up in your Summate Inbox, we haven't received them. Common causes:
+
+- **Network rejection** - Your email provider may be blocking forwarding. If you're using Outlook/Microsoft 365, see our [auto-forwarding guide](/guides/auto-forwarding) for details on enabling external forwarding (look for the "Enabling External Forwarding" section).
+- **Removed from mailing list** - In rare cases, you may have been unsubscribed from the newsletter (if you subscribed directly).
+
+Check your email provider's settings to ensure forwarding is properly configured.
+
+### Running out of credits?
+
+You cannot purchase additional credits at the moment, but we plan to add this feature in the future. In the meantime, if you're running low on credits, please contact support@summate.io and we can help you.
+
+## Account & Billing
+
+### Can I change my plan?
+
+We currently offer only one plan, and we don't plan to introduce additional tiers at this time.
+
+### What payment methods are accepted?
+
+We use Stripe for payment processing, which supports all major credit cards, debit cards, and other payment methods available through Stripe.
+
+### Can I cancel anytime?
+
+Yes! Head to your [account settings](/account) to manage your subscription yourself.
+
+### Do you offer team plans?
+
+We're looking into team plans alongside enterprise support. In the meantime, please reach out to raduan@summate.io with your use case and what you'd like to use it for.
+
+## Features & Limitations
+
+### Maximum sources per digest?
+
+There's no hard limit on the number of sources you can add to a digest. However, be mindful that YouTube channels that post frequently can consume your AI credits quickly.
+
+### How far back does content go?
+
+We scan content for the period since your last digest was sent. Your first digest will include content from the last week.
+
+### What languages are supported?
+
+We support receiving content in any language, but summaries are currently only available in English. We plan to add summaries in other languages in the future.
+
+## Still Have Questions?
+
+<Card title="Get in Touch" icon="envelope" href="mailto:support@summate.io">
+  Contact us at **support@summate.io** - we typically respond within 24 hours. Feature requests are always welcome!
+</Card>
+
+## Next Steps
+
+<CardGroup cols={3}>
+  <Card title="Quick Start" icon="play" href="/getting-started/quickstart">
+    Create your first digest
+  </Card>
+  <Card title="Digests" icon="newspaper" href="/concepts/digests">
+    Learn about digests
+  </Card>
+  <Card title="Blocks" icon="cube" href="/concepts/blocks">
+    Learn about blocks
+  </Card>
+</CardGroup>

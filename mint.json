@@ -1,22 +1,26 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Summate Docs",
+  "name": "Summate",
   "logo": {
-    "dark": "/logo/dark.jpg",
-    "light": "/logo/light.jpg",
+    "dark": "/logo/summate-logo-dark.png",
+    "light": "/logo/summate-logo-light.png",
     "href": "https://docs.summate.io"
   },
   "modeToggle": {
-    "default": "dark"
+    "default": "light"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/favicon.ico",
   "colors": {
-    "primary": "#9F7AEA",
-    "light": "#D6BBFB",
-    "dark": "#6B46C1",
+    "primary": "#ff6b35",
+    "light": "#ff6b35",
+    "dark": "#ea580c",
+    "background": {
+      "light": "#faf9f7",
+      "dark": "#1f1f1f"
+    },
     "anchors": {
-      "from": "#6B46C1",
-      "to": "#D6BBFB"
+      "from": "#ff6b35",
+      "to": "#ea580c"
     }
   },
   "topbarLinks": [
@@ -26,15 +30,10 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Inbox",
-    "url": "https://summate.io/inbox"
+    "name": "My Digests",
+    "url": "https://summate.io/v2"
   },
   "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.summate.io"
-    },
     {
       "name": "Community",
       "icon": "discord",
@@ -48,37 +47,45 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "manifesto", "faq"]
-    },
-    {
-      "group": "Essentials",
+      "group": "Getting Started",
+      "icon": "rocket",
       "pages": [
-        "essentials/ai-inbox",
-        "essentials/managing-newsletters",
-        "essentials/other-sources",
-        "essentials/customizing-digests",
-        "essentials/auto-forwarding",
-        "essentials/settings"
+        "getting-started/quickstart",
+        "getting-started/faq"
       ]
     },
     {
-      "group": "Chrome Extension",
+      "group": "Concepts",
+      "icon": "lightbulb",
       "pages": [
-        "extension/quickstart",
-        "extension/save-for-later",
-        "extension/settings",
-        "extension/faq"
+        "concepts/digests",
+        "concepts/blocks",
+        "concepts/sources",
+        "concepts/inbox",
+        "concepts/ai"
       ]
     },
     {
-      "group": "Integrations",
+      "group": "Reading",
+      "icon": "book-open",
       "pages": [
-        "integrations/available-integrations",
-        "integrations/readwise",
-        "integrations/substack",
-        "integrations/youtube",
-        "integrations/suggest"
+        "reading/web",
+        "reading/email"
+      ]
+    },
+    {
+      "group": "Guides",
+      "icon": "book-bookmark",
+      "pages": [
+        "guides/auto-forwarding",
+        "guides/substack-import"
+      ]
+    },
+    {
+      "group": "Settings",
+      "icon": "gear",
+      "pages": [
+        "account"
       ]
     }
   ],

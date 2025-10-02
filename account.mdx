@@ -1,0 +1,137 @@
+---
+title: Account
+icon: user-gear
+description: Manage your account settings, credits, and subscription
+---
+
+Access your account settings to manage your profile, monitor AI credits, and control your subscription.
+
+<CardGroup cols={2}>
+  <Card title="Profile Settings" icon="user">
+    Configure your name and timezone for personalized digests
+  </Card>
+  <Card title="AI Inbox" icon="inbox">
+    Your unique forwarding address for newsletters
+  </Card>
+  <Card title="AI Credits" icon="coins">
+    Monitor usage and understand credit consumption
+  </Card>
+  <Card title="Subscription" icon="credit-card">
+    Manage your plan and billing
+  </Card>
+</CardGroup>
+
+## Profile Settings
+
+<Tabs>
+  <Tab title="Name">
+    Update your display name that appears in your digests and account.
+
+    <Info>
+      Your name will be shown in digest emails and your account dashboard.
+    </Info>
+
+  </Tab>
+
+  <Tab title="Timezone">
+    Set your local timezone for accurate digest scheduling. All delivery times are based on this setting.
+
+    <Tip>
+      Digest delivery times automatically adjust for daylight saving time based on your selected timezone. Changes will be reflected in your next digest generation.
+    </Tip>
+
+  </Tab>
+</Tabs>
+
+## AI Inbox
+
+Your unique forwarding address for newsletters will look like this: `username@inbox.summate.io`
+
+<Info>
+  Forward newsletters to this address to automatically add them to your sources.
+  They'll appear in your approval queue within minutes.
+</Info>
+
+Learn more about [setting up your inbox](/concepts/inbox).
+
+## AI Credits
+
+### Current Balance
+
+Track your available credits and monthly usage.
+
+<Card title="Articles & Newsletters">
+  <h3>1 credit</h3>
+  Newsletters and blog posts
+</Card>
+
+<CardGroup cols={3}>
+  <Card title="Short Videos">
+    <h3>1 credit</h3>
+    Videos up to 30 minutes
+  </Card>
+  <Card title="Medium Videos">
+    <h3>2 credits</h3>
+    30 minutes to 2 hours
+  </Card>
+  <Card title="Long Videos">
+    <h3>3 credits</h3>
+    Videos over 2 hours
+  </Card>
+</CardGroup>
+
+### Monthly Refresh
+
+<Note>
+  Credits refresh on the **1st of each month**. Your plan includes **2000
+  credits monthly** - enough for most users to process 66~ posts a day.
+</Note>
+
+<Tip>
+  We plan to introduce credit purchase options in the future. If you need more
+  credits now, reach out to [support@summate.io](mailto:support@summate.io).
+</Tip>
+
+## Subscription Management
+
+<Accordion title="Current Plan">
+  View your active subscription and billing details.
+
+  Your plan includes:
+  - 2000 AI credits per month
+  - Unlimited digests
+  - All content sources
+  - Email and web delivery
+</Accordion>
+
+<Accordion title="Payment Method">
+  Update payment information or download invoices through the Stripe Customer Portal.
+
+  We accept:
+  - Credit and debit cards
+  - Payment changes take effect immediately
+  - Invoices are sent to your email monthly
+</Accordion>
+
+<Accordion title="Manage Subscription">
+  Update your billing information or cancel/renew your subscription anytime through the Stripe Customer Portal.
+
+  <Warning>
+    Cancellations will maintain access until the end of your current billing period.
+  </Warning>
+</Accordion>
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card title="Documentation" icon="book" href="/getting-started/faq">
+    Check our FAQ for common questions
+  </Card>
+  <Card
+    title="Contact Support"
+    icon="life-ring"
+    href="mailto:support@summate.io"
+  >
+    Email us for personalized help
+  </Card>
+</CardGroup>

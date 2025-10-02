@@ -1,0 +1,129 @@
+---
+title: "Substack Import"
+description: "Import all your Substack subscriptions in one click"
+icon: "S"
+---
+
+Instead of adding Substack newsletters one by one, you can connect your Substack account and import all your subscriptions at once.
+
+<Info>
+This quick import feature is available when adding an RSS block. You can also add individual Substack newsletters by pasting their URLs directly.
+</Info>
+
+## Connecting Your Substack Account
+
+<Steps>
+  <Step title="Find your Substack profile URL">
+    Navigate to substack.com and click on your profile icon, then click on your name to view your profile.
+
+    <Frame caption="Click on your profile icon and then your name">
+      <img
+        src="/images/substack/substack_connect_1.png"
+        alt="Substack profile navigation"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Make your 'Reads' section public">
+    For Summate to import your subscriptions, your 'Reads' section must be public.
+
+    <Frame caption="Example profile showing the Reads section">
+      <img
+        src="/images/substack/substack_connect_2_1.png"
+        alt="Substack profile with Reads section"
+      />
+    </Frame>
+
+    Click **'Edit Profile'** and scroll down to the **'Reads'** section. Here you can choose which newsletters to make public.
+
+    <Frame caption="Configure which newsletters are visible in your public Reads">
+      <img
+        src="/images/substack/substack_connect_2_2.png"
+        alt="Substack Reads privacy settings"
+      />
+    </Frame>
+
+    <Tip>
+      You only need to make your Reads public during the import. After syncing with Summate, you can make them private again.
+    </Tip>
+  </Step>
+
+  <Step title="Connect in Summate">
+    In Summate, when creating or editing an RSS block, click **'Import your Substack'**.
+
+    <Frame caption="Click the Import Substack button in your RSS block">
+      <img
+        src="/images/substack/substack_connect_3_1.png"
+        alt="Import Substack button in Summate"
+      />
+    </Frame>
+
+    Enter your Substack profile URL in the format:
+    - `https://substack.com/@username` or
+    - `https://substack.com/profile/username`
+
+    <Frame caption="Enter your Substack profile URL">
+      <img
+        src="/images/substack/substack_connect_3_2.png"
+        alt="Substack profile URL input"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Select subscriptions to import">
+    Summate will fetch all your public subscriptions. Select which ones you want to add to your RSS block.
+
+    <Frame caption="Choose which Substack newsletters to import">
+      <img
+        src="/images/substack/substack_connect_3_3.png"
+        alt="Substack subscription selection"
+      />
+    </Frame>
+
+    The selected newsletters will be added as sources in your RSS block.
+  </Step>
+</Steps>
+
+## After Import
+
+Once imported, your Substack newsletters will appear as RSS sources in your block. You can:
+
+- View them in the RSS block's Sources tab
+- Remove individual newsletters if needed
+- Import additional Substack accounts following the same process
+
+<Note>
+Substack newsletters imported this way are treated as RSS feeds. They'll be summarized just like any other blog or RSS source in your digest.
+</Note>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Import not working" icon="circle-exclamation">
+    - Verify your Reads section is public
+    - Check that your profile URL is correct
+    - Try using the alternative URL format (`@username` vs `profile/username`)
+  </Accordion>
+
+  <Accordion title="Some newsletters missing" icon="list">
+    Only newsletters visible in your public Reads will be imported. Check your Reads privacy settings and make sure the newsletters you want are set to public.
+  </Accordion>
+
+  <Accordion title="Already have newsletters via email" icon="envelope">
+    If you're already receiving Substack newsletters via [email forwarding](/guides/auto-forwarding), you don't need to import them as RSS sources. You can add them to an Email block instead.
+  </Accordion>
+</AccordionGroup>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="RSS Blocks" icon="rss" href="/concepts/blocks#rss-block">
+    Learn about RSS blocks and sources
+  </Card>
+  <Card title="Sources" icon="newspaper" href="/concepts/sources#rss-sources">
+    Understand how sources work
+  </Card>
+  <Card title="Email Forwarding" icon="envelope" href="/guides/auto-forwarding">
+    Alternative: Forward Substack newsletters via email
+  </Card>
+</CardGroup>
