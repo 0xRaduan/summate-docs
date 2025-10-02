@@ -62,7 +62,7 @@
         "concepts/blocks",
         "concepts/sources",
         "concepts/inbox",
-        "concepts/ai-features"
+        "concepts/ai"
       ]
     },
     {
@@ -77,7 +77,8 @@
       "group": "Guides",
       "icon": "book-bookmark",
       "pages": [
-        "guides/auto-forwarding"
+        "guides/auto-forwarding",
+        "guides/substack-import"
       ]
     },
     {

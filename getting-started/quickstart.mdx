@@ -1,84 +1,138 @@
 ---
-title: Quick Start
+title: Quickstart
 icon: play
 description: Get your first digest in 5 minutes
 ---
 
-Set up your first Summate digest in just 5 minutes.
+Set up your first Summate digest in just 5 minutes and start receiving AI-powered summaries of your newsletters, YouTube videos, and blogs.
+
+## What You'll Build
+
+A personalized digest that automatically:
+- Summarizes newsletters, YouTube videos, and blog posts
+- Arrives on your schedule (daily, weekly, or monthly)
+- Delivers via email and web reader
+
+<Frame caption="Your configured digests with schedules and content sources">
+  <img src="/images/digests-list.png" alt="Example of digests list showing multiple configured digests" />
+</Frame>
 
 <Steps>
-  <Step title="Sign Up & Onboarding">
+  <Step title="Sign Up & Complete Onboarding">
     Go to [summate.io](https://summate.io) and click "Start free trial". During onboarding:
-    - Fill out information about yourself
-    - Connect your accounts (YouTube, Substack, etc.)
-    - Get personalized digest recommendations or choose from our curated library
+
+    1. **Tell us about yourself** - Share your interests so AI can personalize your summaries
+    2. **Connect your accounts** - Link YouTube and Substack for quick setup
+    3. **Get personalized digests** - We'll create digests based on your profile, or choose from our curated library
 
     **What you get:**
     - 14-day free trial
     - 2000 AI credits per month
+    - Pre-configured digests based on your interests
 
+    <Tip>
+      The more you share during onboarding, the better we can tailor your digest recommendations and AI summaries.
+    </Tip>
   </Step>
 
   <Step title="Customize Your Digests">
-    After onboarding, you'll have digests generated for you. You can customize them by adding or removing [blocks](/concepts/blocks):
+    After onboarding, you'll have digests already created for you. Customize them by adding, removing, or editing [blocks](/concepts/blocks):
 
     <Tabs>
       <Tab title="Email Block">
-        0. Create a special [Summate Inbox](/concepts/inbox)
-        1. Forward your newsletters to your AI inbox ([see our setup guide](/guides/auto-forwarding)) or subscribe to new newsletters with this address.
-        2. Select which ones to include in this digest or mark "Include All" so all newsletters received will be included.
+        For newsletters you receive via email:
+
+        1. **Create your [Summate Inbox](/concepts/inbox)** - Get a unique address like `username@inbox.summate.io`
+        2. **Forward newsletters** to your inbox ([setup guide](/guides/auto-forwarding))
+        3. **Select senders** to include, or choose "Include All" for automatic inclusion
+
+        <Info>
+          All approved senders are available as sources. Block spam senders with one click.
+        </Info>
       </Tab>
       <Tab title="YouTube Block">
-        1. Paste YouTube channel URLs
-        2. Or connect your YouTube account to select from your subscriptions.
-        3. Decide which channels to include
+        For YouTube channels you follow:
+
+        1. Connect your YouTube account to import subscriptions, or
+        2. Paste channel URLs manually
+        3. Select which channels to include
+
+        <Tip>
+          If you connected YouTube during onboarding, your subscriptions are already imported!
+        </Tip>
       </Tab>
       <Tab title="RSS Block">
-        1. Add blog or news site URLs
-        2. Summate tries it's best to find the RSS feed automatically. If it doesn't work, try adding RSS feed directly.
+        For blogs and news sites:
+
+        1. Paste website URLs - Summate auto-detects RSS feeds
+        2. Or add RSS feed URLs directly if auto-detection fails
+        3. Import Substack subscriptions ([see guide](/guides/substack-import))
+
+        <Tip>
+          If you connected Substack during onboarding, your newsletters may already be added!
+        </Tip>
       </Tab>
     </Tabs>
 
     Learn more about [how blocks work](/concepts/blocks).
-
   </Step>
 
-  <Step title="Schedule Your Digest">
-    Choose when to receive your digest:
-    - **Daily** - Every day at your chosen time (can be multiple times per day, at least 4 hours apart)
-    - **Weekly** - Pick your day(s) and time
-    - **Monthly** - Pick on which days to receive the digest
+  <Step title="Customize AI Summaries (Optional)">
+    By default, you get **Detailed Summaries** with TLDR and clickable key takeaways. Add custom instructions to personalize what AI focuses on:
+
+    - **Block-level**: "Focus on pricing and business models"
+    - **Digest-level**: "Emphasize actionable insights"
+    - **Account-level**: "Write for a technical audience"
+
+    Learn more about [AI customization](/concepts/ai).
+  </Step>
+
+  <Step title="Review Your Schedule">
+    Your digests come with recommended schedules, but you can adjust when to receive them:
+
+    - **Daily** - Every day at your chosen time (multiple times allowed, 4hr minimum apart)
+    - **Weekly** - Pick specific day(s) and time
+    - **Monthly** - Choose which days of the month
 
     <Tip>
       Set your timezone during onboarding or later in [account settings](/account).
     </Tip>
-
   </Step>
 
   <Step title="Activate Your Digest">
-    By default, digests are created in **draft** state. When you're ready:
-    1. Review your digest settings
-    2. Click the **Activate** button
-    3. Your digest will start arriving at the scheduled time
+    Digests start in **Draft** state so you can review before activation:
+
+    1. Review your blocks, sources, and schedule
+    2. Click **Activate** when ready
+    3. Your first digest arrives at the next scheduled time
+
+    <Warning>
+      Once activated, your digest will be generated and sent automatically. You can pause or edit it anytime.
+    </Warning>
   </Step>
 </Steps>
 
-<Note>
-  **That's It!** Your first digest will arrive at the scheduled time. You can
-  read summaries of all your content, click through to full articles, and adjust
-  your sources anytime.
-</Note>
+## What Happens Next?
+
+When your scheduled time arrives, your digest will:
+1. **Collect new content** from all your sources since the last digest
+2. **Generate AI summaries** based on your [custom instructions](/concepts/ai)
+3. **Deliver to your email** inbox and make available on the [web reader](/reading/web)
+
+<Info>
+Digests are always delivered **both via email and web**. No need to choose—read wherever is most convenient.
+</Info>
 
 ## Next Steps
 
 <CardGroup cols={3}>
-  <Card title="Learn Concepts" icon="lightbulb" href="/concepts/digests">
-    Understand how digests and blocks work
+  <Card title="Understand Digests" icon="newspaper" href="/concepts/digests">
+    Learn how digests and blocks work together
   </Card>
-  <Card title="Explore Sources" icon="rss" href="/concepts/sources">
-    Add more content sources
+  <Card title="Add More Sources" icon="rss" href="/concepts/sources">
+    Expand your content sources
   </Card>
   <Card title="Reading Options" icon="book-open" href="/reading/web">
-    Explore different ways to read
+    Explore web reader and email delivery
   </Card>
 </CardGroup>

@@ -6,7 +6,7 @@ description: Understanding content blocks - the building units of your digests
 
 Blocks are the building units of your digests. Each block pulls content from specific sources and generates AI summaries based on your custom instructions.
 
-<Frame>
+<Frame caption="Blocks are organized sequentially in your digest builder">
   <img src="/images/blocks-builder.png" alt="Example of blocks in the digest builder" />
 </Frame>
 
@@ -20,11 +20,17 @@ You can create multiple blocks of the same type within a digest. This is useful 
 
 ## Block Types
 
+Summate offers three types of blocks to organize different content sources:
+
+<Frame caption="Choose which type of block to add to your digest">
+  <img src="/images/blocks/block-types.png" alt="Add Block modal showing YouTube, RSS, and Email options" />
+</Frame>
+
 ### Email Block
 
 Pull content from newsletters received in your [Summate Inbox](/concepts/inbox).
 
-<Frame>
+<Frame caption="Select which newsletter senders to include in this block">
   <img src="/images/blocks/email-block.png" alt="Email block configuration showing sender selection" />
 </Frame>
 
@@ -51,13 +57,13 @@ Use the **"Include All"** option if you're just starting out. This automatically
 **Content Processing**
 - Only new emails since your last digest are included
 - Inactive sources (no new content) won't appear in the digest
-- Each email is summarized with a TLDR and key takeaways (learn about [AI summarization](/concepts/ai-features))
+- Each email is summarized with a TLDR and key takeaways (learn about [AI summarization](/concepts/ai))
 
 ### YouTube Block
 
 Summarize videos from YouTube channels you follow.
 
-<Frame>
+<Frame caption="Add YouTube channels by importing subscriptions or pasting URLs">
   <img src="/images/blocks/youtube-block.png" alt="YouTube block configuration showing channel selection and filters" />
 </Frame>
 
@@ -79,7 +85,7 @@ Summarize videos from YouTube channels you follow.
 **Content Processing**
 - Only new videos since your last digest are included
 - Inactive channels (no new videos) won't appear in the digest
-- Each video is summarized with key takeaways linked to relevant timestamps (learn about [AI summarization](/concepts/ai-features))
+- Each video is summarized with key takeaways linked to relevant timestamps (learn about [AI summarization](/concepts/ai))
 
 <Note>
 Click on any key takeaway to jump directly to the relevant timestamp in the video. Perfect for skipping to the parts that matter most to you.
@@ -89,7 +95,7 @@ Click on any key takeaway to jump directly to the relevant timestamp in the vide
 
 Aggregate content from blogs, news sites, and any website with an RSS feed.
 
-<Frame>
+<Frame caption="Enter website or RSS feed URLs to add blog sources">
   <img src="/images/blocks/rss-block.png" alt="RSS block configuration showing feed sources" />
 </Frame>
 
@@ -108,7 +114,7 @@ By default, we filter out very short content (less than 10 words) to ensure you 
 **Content Processing**
 - Only new content since your last digest is included
 - Inactive sources (no new posts) won't appear in the digest
-- Each article is summarized with a TLDR and key takeaways (learn about [AI summarization](/concepts/ai-features))
+- Each article is summarized with a TLDR and key takeaways (learn about [AI summarization](/concepts/ai))
 
 <Note>
 Click on any key takeaway to jump to the exact paragraph in the original article where that information appears.
@@ -122,7 +128,7 @@ Click on any key takeaway to jump to the exact paragraph in the original article
   <Card title="Block Name" icon="tag">
     Give your block a descriptive name to stay organized (e.g., "AI Newsletters", "Tech YouTube")
   </Card>
-  <Card title="Custom Instructions" icon="wand-magic-sparkles" href="/concepts/ai-features#customization-levels">
+  <Card title="Custom Instructions" icon="wand-magic-sparkles" href="/concepts/ai#customization-levels">
     Add block-level custom instructions to personalize how AI summarizes this specific block's content
   </Card>
 </CardGroup>
@@ -137,7 +143,7 @@ Currently, all blocks use **Detailed Summaries**, which provide:
 We plan to add topic-based grouping to organize your summaries by themes and subjects automatically.
 </Note>
 
-Learn more about customizing AI summaries in our [AI Features guide](/concepts/ai-features).
+Learn more about customizing AI summaries in our [AI Personalization guide](/concepts/ai).
 
 ## Organizing Blocks
 
@@ -181,7 +187,7 @@ There's no hard limit on the number of blocks per digest. However, keep in mind 
   <Card title="Name Descriptively" icon="tag">
     Use clear block names like "AI Research" or "Morning Tech News" for easy identification
   </Card>
-  <Card title="Use Custom Instructions" icon="wand-magic-sparkles" href="/concepts/ai-features#customization-levels">
+  <Card title="Use Custom Instructions" icon="wand-magic-sparkles" href="/concepts/ai#customization-levels">
     Apply block-level instructions to personalize summaries for different content types
   </Card>
   <Card title="Review Regularly" icon="calendar">
@@ -198,7 +204,7 @@ There's no hard limit on the number of blocks per digest. However, keep in mind 
   <Card title="Set Up Your Inbox" icon="inbox" href="/concepts/inbox">
     Configure email forwarding for newsletters
   </Card>
-  <Card title="AI Customization" icon="sparkles" href="/concepts/ai-features">
+  <Card title="AI Customization" icon="sparkles" href="/concepts/ai">
     Personalize your summaries
   </Card>
 </CardGroup>
