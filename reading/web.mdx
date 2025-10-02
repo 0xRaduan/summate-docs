@@ -4,270 +4,186 @@ icon: globe
 description: Read your digests in the Summate web interface
 ---
 
-Access all your digests online at `summate.io/digest` with an optimized reading experience.
+Access all your digests online at [summate.io/v2/issues](https://summate.io/v2/issues) with an optimized reading experience and interactive features.
 
-## Accessing Your Digests
+<Frame>
+  <img src="/images/reading/web-reader.png" alt="Summate web reader showing digest issue with multiple content blocks" />
+</Frame>
 
-### Direct Access
-- Visit `summate.io/digest`
-- Bookmark for quick access
-- No login required when authenticated
+## Accessing the Web Reader
 
-### From Email
-- Click "Read on Web" in any digest email
-- Opens directly to that digest
-- Maintains reading position
+Digests are always available on the web alongside email delivery—no need to choose between formats.
 
-[Screenshot placeholder: Web reader homepage]
+<Tabs>
+  <Tab title="Direct Access">
+    Visit `summate.io/v2/issues` to see all your digest issues:
+    - **Chronological view** - All past digests organized day by day
+    - **One-click access** - Select any digest to start reading
+    - **Bookmark it** - Quick access for daily reading
+  </Tab>
+  <Tab title="From Email">
+    Every email digest includes a **"Read on Web"** link that:
+    - Opens directly to that specific digest issue
+    - Provides the full reading experience
+    - Useful when email clients clip long digests
+  </Tab>
+</Tabs>
 
-## Reader Interface
+<Frame>
+  <img src="/images/reading/digest-issues-list.png" alt="List of all digest issues organized chronologically" />
+</Frame>
+
+## Why Use the Web Reader
+
+The web interface offers advantages over email for interactive reading:
+
+<CardGroup cols={2}>
+  <Card title="Embedded Content" icon="window-restore">
+    Read full emails, watch YouTube videos, and view RSS blogs—all on one platform without switching tabs
+  </Card>
+  <Card title="Keyboard Shortcuts" icon="keyboard">
+    Navigate through digest items quickly with keyboard commands (desktop)
+  </Card>
+  <Card title="Interactive Features" icon="sparkles">
+    Clickable takeaways that jump to exact paragraphs or video timestamps
+  </Card>
+  <Card title="Full History" icon="clock-rotate-left">
+    Browse and search all past digest issues anytime
+  </Card>
+</CardGroup>
+
+## Reading Interface
 
 ### Navigation
 
-**Digest Selector**
-- Dropdown of all your digests
-- Recent digests first
-- Search by name
-- Filter by date
+The web reader provides two views for navigating your digest:
 
-**Quick Navigation**
-- Jump between blocks
-- Keyboard shortcuts
-- Progress indicator
-- Back to top button
+**Canvas View (Reading List)**
+- See all items in the current digest
+- Navigate between items with keyboard shortcuts
+- Visual overview of content blocks
+- Quick scanning through summaries
 
-### Reading View
+**Detail View (Content Sheet)**
+- Full content display for selected item
+- Embedded emails, videos, and blog posts
+- Toggle summary and takeaways sections
+- Read full original content without leaving the digest
 
-**Layout Options**
-- **Card View** - Visual with images
-- **List View** - Compact scanning
-- **Reader View** - Focus mode
+### Embedded Content Rendering
 
-**Customization**
-- Font size adjustment
-- Light/dark theme
-- Width preferences
-- Line spacing
+<Tabs>
+  <Tab title="Email Content">
+    Full newsletter emails render directly in the digest reader using the same interface as the [Inbox](/concepts/inbox):
+    - Original formatting preserved
+    - Images and links intact
+    - No need to switch to email client
+  </Tab>
+  <Tab title="YouTube Videos">
+    Videos play in an embedded player with full controls:
+    - Play/pause and speed adjustment
+    - Timestamp jumps from AI takeaways
+    - Keyboard shortcuts for playback control
+  </Tab>
+  <Tab title="RSS Blogs">
+    Blog posts and articles display with clean formatting:
+    - Readable typography
+    - Images and embedded media
+    - Links to original source
+  </Tab>
+</Tabs>
 
-[Screenshot placeholder: Different view modes]
-
-## Interactive Features
-
-### Expandable Content
-
-Click to expand:
-- Additional takeaways
-- Full summaries
-- Image galleries
-- Video embeds
-
-### Real-Time Actions
-
-Without leaving reader:
-- Save items for later
-- Share to social media
-- Copy summary text
-- Email to someone
-
-### Smart Highlighting
-
-AI highlights:
-- Key numbers and data
-- Important quotes
-- Action items
-- Deadlines
-
-[Screenshot placeholder: Interactive elements demo]
+<Tip>
+The web reader is especially useful on **desktop** where keyboard shortcuts make navigation significantly faster than scrolling through email.
+</Tip>
 
 ## Keyboard Shortcuts
 
-Navigate efficiently:
+Navigate efficiently with keyboard commands (desktop only):
 
-- `J` - Next item
-- `K` - Previous item
-- `Enter` - Expand/collapse
-- `S` - Save current item
-- `O` - Open original
-- `D` - Next digest
-- `?` - Show all shortcuts
+### Canvas Navigation (Reading List)
 
-## Mobile Experience
+- `j` or `↓` — Navigate to next item
+- `k` or `↑` — Navigate to previous item
+- `Cmd/Ctrl + ↑` — Jump to first item
+- `Cmd/Ctrl + ↓` — Jump to last item
+- `Enter` — Open detail view for current item
 
-### Touch Optimized
+### Detail View (All Content Types)
 
-- Swipe between items
-- Pull to refresh
-- Pinch to zoom
-- Tap to expand
+- `Esc` — Close detail view
+- `r` — Toggle read/unread status
+- `e` — Mark as read
+- `s` — Toggle summary section
+- `t` — Toggle takeaways section
 
-### Progressive Web App
+### Detail View (YouTube Only)
 
-- Add to home screen
-- Offline reading
-- Push notifications
-- Native app feel
+- `Space` — Play/pause video
+- `d` — Speed up playback
+- `a` — Slow down playback
 
-[Screenshot placeholder: Mobile web reader]
+<Info>
+Keyboard shortcuts are available on desktop only. Mobile users can navigate by tapping items in the reading list.
+</Info>
 
-## Sharing & Export
+## Different Summary Types
 
-### Share Digest
+Summary formats vary based on your [AI customization settings](/concepts/ai-features). Each format offers different features for interacting with content.
 
-Share entire digest:
-- Public link (24hr)
-- Password protected
-- Team access only
-- Embed code
+### Detailed Summaries
 
-### Export Options
+When using the **Detailed Summaries** format, interactive references work seamlessly in the web reader:
 
-Download digest as:
-- PDF document
-- Markdown file
-- Email forward
-- Print version
+<Steps>
+  <Step title="Click on key takeaways">
+    Each takeaway is clickable in both summary and detail views
+  </Step>
+  <Step title="Jump to exact context">
+    - **Email content**: Scrolls to the specific paragraph in the embedded email
+    - **YouTube videos**: Jumps video to the exact timestamp in the embedded player
+    - **RSS posts**: Links to the relevant section in the embedded blog post
+  </Step>
+  <Step title="Read or watch in place">
+    All content is embedded—no need to open external links or switch tabs
+  </Step>
+</Steps>
 
-### Social Sharing
+<Info>
+More summary formats with unique interactive features are coming soon.
+</Info>
 
-Share individual items:
-- Twitter/X
-- LinkedIn
-- Email
-- Copy link
+## When to Use Web vs Email
 
-## Advanced Features
+<Tabs>
+  <Tab title="Use Email When...">
+    - You prefer reading in your familiar email client
+    - You want to quickly scroll through digest summaries
+    - You're triaging content on the go
+    - You don't need embedded video/content
+  </Tab>
+  <Tab title="Use Web When...">
+    - You want to watch videos or read full emails in one place
+    - You're on desktop and can use keyboard shortcuts
+    - Email client is clipping long digests
+    - You need to find past digest issues
+    - You want the most interactive reading experience
+  </Tab>
+</Tabs>
 
-### Search
+## Related Pages
 
-Search within digests:
-- Full text search
-- Filter by source
-- Date ranges
-- Saved searches
-
-### Tags & Organization
-
-- Tag items while reading
-- Create collections
-- Filter by tags
-- Export tag groups
-
-### Reading Statistics
-
-Track your habits:
-- Items read/skipped
-- Time spent reading
-- Most read sources
-- Engagement trends
-
-[Screenshot placeholder: Statistics dashboard]
-
-## Personalization
-
-### Theme Options
-
-**Light Themes**
-- Clean White
-- Soft Sepia
-- Paper
-
-**Dark Themes**
-- True Black
-- Dark Gray
-- Navy
-
-**Auto Theme**
-- Follow system
-- Time-based
-- Per-digest
-
-### Layout Preferences
-
-Save preferences:
-- Default view mode
-- Expansion state
-- Sort order
-- Hidden sections
-
-## Team Features
-
-### Shared Digests
-
-For teams:
-- Shared reading lists
-- Comments on items
-- Highlight sharing
-- Read receipts
-
-### Collaborative Tools
-
-- Discuss articles
-- Share takeaways
-- Assign items
-- Track team reads
-
-[Screenshot placeholder: Team collaboration features]
-
-## Performance
-
-### Fast Loading
-
-- Progressive rendering
-- Image lazy loading
-- CDN delivery
-- Cached content
-
-### Offline Support
-
-- Recent digests cached
-- Read without internet
-- Sync when connected
-- Download for travel
-
-## Accessibility
-
-### Screen Reader Support
-
-- Semantic HTML
-- ARIA labels
-- Keyboard navigation
-- High contrast mode
-
-### Visual Aids
-
-- Adjustable fonts
-- Color blind modes
-- Focus indicators
-- Voice control ready
-
-## Integration
-
-### Browser Extensions
-
-Quick actions:
-- Save to Summate
-- Share to digest
-- Quick preview
-- Add source
-
-### Bookmarking Services
-
-Connect with:
-- Readwise
-- Instapaper
-- Pocket
-- Raindrop
-
-## Best Practices
-
-1. **Bookmark the reader** - Quick daily access
-2. **Learn shortcuts** - Navigate faster
-3. **Customize theme** - Reduce eye strain
-4. **Use search** - Find past items
-5. **Try mobile** - Great for commutes
-
-## Next Steps
-
-- [Learn keyboard shortcuts](/reading/shortcuts)
-- [Set up integrations](/account/integrations)
-- [Customize your theme](/account/preferences)
+<CardGroup cols={2}>
+  <Card title="Email Reading" icon="envelope" href="/reading/email">
+    Read digests in your email client
+  </Card>
+  <Card title="AI Features" icon="sparkles" href="/concepts/ai-features">
+    Understand interactive summaries and takeaways
+  </Card>
+  <Card title="Digests" icon="newspaper" href="/concepts/digests">
+    Configure delivery schedule and settings
+  </Card>
+  <Card title="Inbox" icon="inbox" href="/concepts/inbox">
+    Manage newsletter sources and read full emails
+  </Card>
+</CardGroup>

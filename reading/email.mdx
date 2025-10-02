@@ -4,55 +4,117 @@ icon: envelope
 description: Reading your Summate digests via email
 ---
 
-Receive your personalized digests directly in your inbox, formatted for easy reading.
+Digests are delivered directly to your inbox on schedule, formatted for easy reading in any email client.
 
-## How It Works
+<Frame>
+  <img src="/images/reading/email-digest.png" alt="Example email digest showing multiple blocks with summaries" />
+</Frame>
 
-Your email digest displays blocks as separate sections, appearing in the same order you arranged them in the digest builder. Each block contains summaries from its connected sources.
+## How Email Digests Work
 
-### Newsletter Summaries
+Your digest appears as a single email with blocks displayed as separate sections. Each block contains AI-generated summaries from its connected sources, appearing in the same order you arranged them in the digest builder.
 
-For newsletter content, each summary includes:
-- AI-generated summary with key points
-- **Click to Read** button that jumps to the exact section in the original email
-- Source attribution and publish date
+### What You See
 
-[Screenshot placeholder: Email digest example]
+Each item in your digest includes:
+- **TLDR summary** - Quick overview of the content
+- **Key takeaways** - Important points and insights
+- **Source attribution** - Newsletter sender, video channel, or blog
+- **Links to full content** - Read the original source
 
-## Deliverability
+<Info>
+All summaries are generated using your [AI customization settings](/concepts/ai-features) at the block, digest, or account level.
+</Info>
 
-### Ensuring Delivery
+## Different Summary Types
 
-To receive your digests reliably:
-1. Whitelist `hello@summate.io` in your email client
-2. Check spam/promotions folders initially
-3. Mark as "Not Spam" if found there
+Summary formats vary based on your [AI customization settings](/concepts/ai-features). Each format offers different features for interacting with content.
 
-### Email Clients
+### Detailed Summaries
 
-Summate digests work with all major email clients:
+When using the **Detailed Summaries** format, you get interactive references that work directly in your email client:
+
+<Steps>
+  <Step title="Click on key takeaways">
+    Each takeaway in Detailed Summaries is clickable
+  </Step>
+  <Step title="Jump to exact context">
+    - **Email content**: Jumps to the specific paragraph in the original email
+    - **YouTube videos**: Opens video at the exact timestamp
+    - **RSS posts**: Links to the relevant section in the blog post
+  </Step>
+  <Step title="Read full content">
+    Access complete newsletters, videos, and articles from digest links
+  </Step>
+</Steps>
+
+<Tip>
+Interactive references make it easy to verify AI summaries or dive deeper into specific points without losing your place in the digest.
+</Tip>
+
+<Info>
+More summary formats with unique interactive features are coming soon.
+</Info>
+
+## Reading Experience
+
+### Email Client Compatibility
+
+Digests work with all major HTML-capable email clients:
 - Gmail (Web & Mobile)
 - Apple Mail
 - Outlook
 - Yahoo Mail
 - ProtonMail
-
-## Reading Experience
-
-### Mobile Optimized
-Digests are responsive and readable on all devices, with touch-friendly buttons and clear typography.
+- Spark
 
 ### Large Digests
-Some email clients like Gmail may clip very long digests. If you see a "View entire message" link at the bottom, we recommend using the web version link at the top of your digest for the best reading experience.
 
-### Rendering Issues
-If you experience formatting problems:
-- Try viewing in a different email client
-- Use the web version link at the top of each digest
-- Report persistent issues to support@summate.io
+Some email clients (especially Gmail) may clip very long digests. If you see "View entire message" at the bottom, click the **"Read on Web"** link at the top of your digest for the full experience.
 
-## Next Steps
+<Warning>
+Email client formatting can be restrictive. For the best reading experience with embedded content and interactive features, use the [web reader](/reading/web).
+</Warning>
 
-- Configure [digest settings](/concepts/digests) for delivery schedule
-- Explore the [web reader](/reading/web) for an alternative reading experience
-- Learn about [managing sources](/concepts/sources) to customize content
+## Ensuring Delivery
+
+<Accordion title="Whitelist Summate's sender address">
+Add `hello@summate.io` to your email contacts or safe sender list to ensure digests reach your inbox.
+</Accordion>
+
+<Accordion title="Check spam/promotions folders">
+When you receive your first digest, check spam or promotions folders. Mark as "Not Spam" if found there.
+</Accordion>
+
+<Accordion title="Report delivery issues">
+If digests consistently don't arrive, contact [support@summate.io](mailto:support@summate.io) with your email provider details.
+</Accordion>
+
+## Web Reader Alternative
+
+Digests are always available on the web alongside email delivery. The web reader offers:
+- Full control over presentation and formatting
+- Embedded email, video, and blog content
+- Keyboard shortcuts for faster navigation
+- Access to all past digest issues
+
+<Card title="Switch to Web Reader" icon="globe" href="/reading/web">
+  Learn about reading digests in the Summate web interface
+</Card>
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Digests" icon="newspaper" href="/concepts/digests">
+    Customize delivery schedule and activation
+  </Card>
+  <Card title="AI Features" icon="sparkles" href="/concepts/ai-features">
+    Understand summarization and customization
+  </Card>
+  <Card title="Blocks" icon="layer-group" href="/concepts/blocks">
+    Organize content sources in your digest
+  </Card>
+  <Card title="Inbox" icon="inbox" href="/concepts/inbox">
+    Read full newsletter emails anytime
+  </Card>
+</CardGroup>
