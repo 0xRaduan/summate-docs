@@ -50,6 +50,7 @@
       "group": "Getting Started",
       "icon": "rocket",
       "pages": [
+        "introduction",
         "getting-started/quickstart",
         "getting-started/faq"
       ]
@@ -98,6 +99,14 @@
     "posthog": {
       "apiKey": "phc_e3UaWWN5DlOsm5eOXnAC6BbGKaA1BMiS1sgqpqtxoWH",
       "apiHost": "https://us.posthog.com"
+    }
+  },
+  "seo": {
+    "indexing": "navigable",
+    "metatags": {
+      "og:site_name": "Summate Documentation",
+      "og:type": "website",
+      "twitter:card": "summary_large_image"
     }
   }
 }
