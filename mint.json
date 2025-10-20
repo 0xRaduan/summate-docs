@@ -31,18 +31,18 @@
   ],
   "topbarCtaButton": {
     "name": "My Digests",
-    "url": "https://summate.io/v2"
+    "url": "https://summate.io/v2?ref=docs.summate.io"
   },
   "anchors": [
     {
       "name": "Community",
       "icon": "discord",
-      "url": "https://summate.io/community"
+      "url": "https://summate.io/community?ref=docs.summate.io"
     },
     {
       "name": "Roadmap",
       "icon": "road",
-      "url": "https://summate.canny.io/feature-requests"
+      "url": "https://summate.io/roadmap?ref=docs.summate.io"
     }
   ],
   "navigation": [
