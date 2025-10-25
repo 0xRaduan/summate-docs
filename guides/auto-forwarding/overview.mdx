@@ -1,0 +1,82 @@
+---
+title: Overview
+icon: "inbox-out"
+description: Set up auto-forwarding in 5 minutes to send newsletters to your Summate inbox
+"og:title": Email Auto-Forwarding Setup - Gmail, Outlook, iCloud & More | Summate
+"og:description": Set up automatic newsletter forwarding in 5 minutes. Step-by-step guides for Gmail, Outlook, iCloud, Yahoo, ProtonMail, Fastmail, and HEY with filter recommendations for selective forwarding.
+keywords: ["email forwarding", "gmail forwarding", "outlook forwarding", "newsletter forwarding", "filters", "auto-forward"]
+---
+
+## Overview
+
+Instead of subscribing to all newsletters manually again, you can set up auto-forwarding and send a copy of selected newsletters from your main inbox to your [summate inbox](/concepts/inbox), automatically.
+
+The overall process typically takes about 5 minutes of time, and generally requires two things:
+
+- add your `@inbox.summate.io` email to your approved forwarding addresses
+- setup filters to forward newsletters to your `@inbox.summate.io` email
+
+## Security First
+
+<Info>
+**Why we use email forwarding instead of OAuth**
+
+We deliberately chose email forwarding over direct inbox access for two key reasons:
+
+1. **Universal Compatibility** - Works with every email provider (Gmail, Outlook, iCloud, ProtonMail, corporate emails, etc.) without special integrations
+
+2. **Privacy by Design** - We only see emails you explicitly choose to forward. Your personal emails, bank statements, and sensitive communications stay completely private. We never have access to your full inbox.
+
+This approach gives you complete control over what content reaches Summate while keeping your email account secure.
+</Info>
+
+## Choose Your Email Provider
+
+Select your email provider below to see step-by-step setup instructions:
+
+<CardGroup cols={3}>
+  <Card title="Gmail" icon="google" href="/guides/auto-forwarding/gmail">
+    Complete guide with verification and filter setup
+  </Card>
+
+  <Card title="Outlook" icon="microsoft" href="/guides/auto-forwarding/outlook">
+    Microsoft 365 and Outlook.com setup
+  </Card>
+
+  <Card title="iCloud Mail" icon="apple" href="/guides/auto-forwarding/icloud">
+    Apple Mail forwarding configuration
+  </Card>
+
+  <Card title="Yahoo Mail" icon="yahoo" href="/guides/auto-forwarding/yahoo">
+    Yahoo Mail Plus forwarding (paid only)
+  </Card>
+
+  <Card title="ProtonMail" icon="lock" href="/guides/auto-forwarding/protonmail">
+    Secure email forwarding with custom rules
+  </Card>
+
+  <Card title="Fastmail" icon="envelope" href="/guides/auto-forwarding/fastmail">
+    Advanced filtering with Sieve support
+  </Card>
+
+  <Card title="HEY" icon="wave-pulse" href="/guides/auto-forwarding/hey">
+    HEY forwarding limitations and workarounds
+  </Card>
+
+  <Card title="Filter Tips" icon="filter" href="/guides/auto-forwarding/filter-tips">
+    Recommended settings for selective forwarding
+  </Card>
+</CardGroup>
+
+## General Tips
+
+Once you've set up forwarding for your email provider:
+
+1. **Test with one newsletter** - Send a test email to verify forwarding works
+2. **Check your Summate inbox** - Confirm the email arrives at [your inbox page](https://summate.io/v2/inbox?ref=docs.summate.io)
+3. **Refine your filters** - Adjust rules based on what's being forwarded
+4. **Review regularly** - Check weekly to ensure only newsletters are forwarded
+
+<Tip>
+Need help with filter settings? Check out our [recommended filter strategies](/guides/auto-forwarding/filter-tips) to ensure only newsletters reach your Summate inbox.
+</Tip>

@@ -78,7 +78,21 @@
       "group": "Guides",
       "icon": "book-bookmark",
       "pages": [
-        "guides/auto-forwarding",
+        {
+          "group": "Email Auto-Forwarding",
+          "icon": "inbox-out",
+          "pages": [
+            "guides/auto-forwarding/overview",
+            "guides/auto-forwarding/gmail",
+            "guides/auto-forwarding/outlook",
+            "guides/auto-forwarding/icloud",
+            "guides/auto-forwarding/yahoo",
+            "guides/auto-forwarding/protonmail",
+            "guides/auto-forwarding/fastmail",
+            "guides/auto-forwarding/hey",
+            "guides/auto-forwarding/filter-tips"
+          ]
+        },
         "guides/substack-import"
       ]
     },

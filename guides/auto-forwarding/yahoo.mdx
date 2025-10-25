@@ -1,0 +1,57 @@
+---
+title: Yahoo Mail Auto-Forwarding Setup
+icon: "yahoo"
+description: Set up auto-forwarding for Yahoo Mail (paid plans only)
+---
+
+<Warning>
+Yahoo Mail only supports **all-or-nothing** forwarding on paid plans (Yahoo Mail Plus). There's no way to forward only newsletters - all emails will be forwarded to Summate.
+</Warning>
+
+## Requirements
+
+- **Yahoo Mail Plus** or **Access + Forwarding** subscription (not available on free accounts)
+- Verification of forwarding address
+
+## Setup Instructions
+
+<Steps>
+  <Step title="Access Forwarding Settings">
+    1. Open Yahoo Mail in your browser
+    2. Click the **Settings gear** → **More settings**
+    3. Navigate to **Mailboxes**
+    4. Click on your primary email account
+  </Step>
+
+  <Step title="Enable Auto-Forwarding">
+    1. Find the **Auto-forwarding** section
+    2. Enter your Summate inbox: `username@inbox.summate.io`
+    3. Click **Verify**
+    4. Check your Summate inbox for verification email
+    5. Complete verification and **Save**
+  </Step>
+</Steps>
+
+<Note>
+**Important Limitation:** Yahoo filters can move emails to folders but **cannot** forward them. If you need selective forwarding for newsletters only, consider using a different email provider.
+</Note>
+
+## Recommendation
+
+Given Yahoo's all-or-nothing limitation, we recommend one of these alternatives:
+
+1. **Use a different provider** - Gmail, Outlook, or Fastmail support selective forwarding
+2. **Create a forwarding chain** - Forward Yahoo → Gmail → Summate with filters in Gmail
+3. **Manual forwarding** - Forward individual newsletters as needed
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Gmail Setup" icon="google" href="/guides/auto-forwarding/gmail">
+    Consider setting up Gmail with selective filters instead
+  </Card>
+
+  <Card title="Back to Overview" icon="arrow-left" href="/guides/auto-forwarding/overview">
+    Return to the main auto-forwarding guide
+  </Card>
+</CardGroup>

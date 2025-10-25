@@ -1,0 +1,64 @@
+---
+title: HEY Auto-Forwarding Setup
+icon: "wave-pulse"
+description: HEY forwarding limitations and workarounds
+---
+
+<Warning>
+HEY only supports **all-or-nothing** forwarding. You cannot forward only newsletters - it's either everything or nothing. HEY's philosophy doesn't include traditional email rules or filters.
+</Warning>
+
+## How HEY Handles Newsletters
+
+HEY automatically routes newsletters to **The Feed** (a separate view), but there's no way to auto-forward only Feed items to external addresses.
+
+## Setup Instructions (All Emails)
+
+<Steps>
+  <Step title="Enable Global Forwarding (If Needed)">
+    If you must forward all emails:
+
+    1. Go to [app.hey.com/accounts](https://app.hey.com/accounts)
+    2. Select your account
+    3. Navigate to **Forwarding & Sending**
+    4. Add `username@inbox.summate.io` as forwarding address
+    5. Complete verification
+
+    **Note:** This forwards ALL emails except spam
+  </Step>
+
+  <Step title="Alternative Approach">
+    For selective forwarding, consider this workaround:
+
+    1. Forward everything from HEY to another provider (Gmail/Fastmail)
+    2. Set up selective rules in that provider
+    3. Forward only newsletters to Summate from there
+
+    This adds complexity but enables selective forwarding.
+  </Step>
+</Steps>
+
+<Note>
+Given HEY's limitations, most users find it easier to manually forward individual newsletters or use HEY's built-in Feed feature instead of auto-forwarding.
+</Note>
+
+## Recommendation
+
+If you're a HEY user and want to use Summate with selective forwarding, we recommend:
+
+1. **Use HEY's Feed** - Keep newsletters in HEY's Feed view
+2. **Manual forwarding** - Forward specific newsletters you want in Summate
+3. **Forwarding chain** - HEY → Gmail → Summate (with filters in Gmail)
+4. **Different provider for newsletters** - Use Gmail/Fastmail for newsletter subscriptions
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Gmail Setup" icon="google" href="/guides/auto-forwarding/gmail">
+    Consider using Gmail with selective filters instead
+  </Card>
+
+  <Card title="Back to Overview" icon="arrow-left" href="/guides/auto-forwarding/overview">
+    Return to the main auto-forwarding guide
+  </Card>
+</CardGroup>

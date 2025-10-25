@@ -1,7 +1,7 @@
 ---
 title: Substack Import
 description: One-click Substack import
-icon: "S"
+icon: "bookmark"
 "og:title": Substack Import - Sync All Newsletter Subscriptions | Summate
 "og:description": Import all your Substack newsletter subscriptions automatically by connecting your Substack account. Learn how to sync subscriptions and add them as RSS sources to your Summate digests.
 keywords: ["substack import", "substack subscriptions", "connect substack", "import newsletters", "rss sync"]
@@ -9,8 +9,16 @@ keywords: ["substack import", "substack subscriptions", "connect substack", "imp
 
 Instead of adding Substack newsletters one by one, you can connect your Substack account and import all your subscriptions at once.
 
+<Warning>
+**Paid Substack subscribers: Use email forwarding instead**
+
+If you're subscribed to paid Substacks, this import feature will only capture the free preview, not the full content. We **strongly recommend** using [email auto-forwarding](/guides/auto-forwarding/overview) and adding your newsletters to an [Email block](/concepts/blocks#email-block) instead. This way, you'll get the complete content of paid newsletters.
+</Warning>
+
 <Info>
-This quick import feature is available when adding an RSS block. You can also add individual Substack newsletters by pasting their URLs directly.
+**Best for quick imports:** This feature is designed as a fast way to bring in all your free Substack subscriptions. For better management and full control, consider using [email forwarding](/guides/auto-forwarding/overview) to add newsletters to an Email block instead.
+
+This import is available when adding an RSS block. You can also add individual Substack newsletters by pasting their URLs directly.
 </Info>
 
 ## Connecting Your Substack Account
@@ -113,7 +121,7 @@ Substack newsletters imported this way are treated as RSS feeds. They'll be summ
   </Accordion>
 
   <Accordion title="Already have newsletters via email" icon="envelope">
-    If you're already receiving Substack newsletters via [email forwarding](/guides/auto-forwarding), you don't need to import them as RSS sources. You can add them to an Email block instead.
+    If you're already receiving Substack newsletters via [email forwarding](/guides/auto-forwarding/overview), you don't need to import them as RSS sources. You can add them to an Email block instead.
   </Accordion>
 </AccordionGroup>
 

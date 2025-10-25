@@ -1,0 +1,70 @@
+---
+title: Fastmail Auto-Forwarding Setup
+icon: "envelope"
+description: Set up advanced auto-forwarding with Fastmail's excellent filtering capabilities
+---
+
+<Note>
+Fastmail offers excellent forwarding capabilities with both simple rules and advanced Sieve filters.
+</Note>
+
+## Setup Instructions
+
+<Steps>
+  <Step title="Create a Forwarding Rule">
+    1. Go to **Settings** → **Rules** (or **Filters & Rules**)
+    2. Click **Create rule**
+    3. Add conditions to identify newsletters:
+       - **From** contains common newsletter domains
+       - **Subject** contains newsletter keywords
+       - **List-Id** header exists (most accurate)
+  </Step>
+
+  <Step title="Set Forward Action">
+    Choose the action type:
+    - **Send a copy to**: Enter `username@inbox.summate.io`
+      - Preserves original sender (recommended)
+      - Better for DMARC compliance
+    - **Forward**: Re-sends from your address
+      - Replies come back to you
+  </Step>
+
+  <Step title="Advanced Filtering (Optional)">
+    For power users, use Sieve scripting:
+
+    ```sieve
+    # Forward newsletters based on List-Id header
+    if header :contains "List-Id" "newsletter" {
+      redirect :copy "username@inbox.summate.io";
+      keep;
+    }
+    ```
+
+    Access via Settings → Advanced → Sieve Filtering
+  </Step>
+</Steps>
+
+<Info>
+Fastmail's "Send a copy to" (redirect) typically has better deliverability than traditional forwarding, especially with strict DMARC policies.
+</Info>
+
+## Why Fastmail is Excellent for This
+
+Fastmail is one of the best options for auto-forwarding newsletters because:
+
+- **Powerful filters** - Supports List-Id header matching (most accurate)
+- **Sieve scripting** - Advanced users can write custom logic
+- **Better deliverability** - "Send a copy to" preserves original sender
+- **No limitations** - All plans support full forwarding features
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Filter Tips" icon="filter" href="/guides/auto-forwarding/filter-tips">
+    Learn smart filtering strategies to forward only newsletters
+  </Card>
+
+  <Card title="Back to Overview" icon="arrow-left" href="/guides/auto-forwarding/overview">
+    Return to the main auto-forwarding guide
+  </Card>
+</CardGroup>
