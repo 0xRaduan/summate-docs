@@ -1,0 +1,159 @@
+---
+title: Recommended Filter Settings
+icon: "filter"
+description: Smart filtering strategies to ensure only newsletters reach your Summate inbox
+---
+
+Setting up the right filters ensures only newsletters reach your Summate inbox, not your personal emails. Here are proven filtering strategies:
+
+## Filter Strategies
+
+<CardGroup cols={2}>
+  <Card title="Platform-Specific Filters" icon="envelope">
+    **Newsletter Platforms:**
+    - Substack: `from:substack.com`
+    - Beehiiv: `from:beehiiv.com`
+    - ConvertKit: `from:convertkit.com`
+    - Ghost: `from:ghost.io`
+    - Mailchimp: `from:mailchimp.com`
+
+    These filters catch all newsletters from major platforms.
+  </Card>
+
+  <Card title="Smart Keyword Filters" icon="filter">
+    **Combine multiple criteria for accuracy:**
+    - `from:newsletter AND has:unsubscribe`
+    - `subject:"weekly" OR subject:"daily" OR subject:"digest"`
+    - `from:noreply AND has:unsubscribe`
+
+    More specific = fewer false positives.
+  </Card>
+</CardGroup>
+
+## Universal "Unsubscribe" Filter
+
+<Warning>
+**Use with caution:** The "has the words: unsubscribe" filter catches most newsletters but may also forward:
+- Order confirmations
+- Service notifications
+- Marketing emails
+- Account updates
+
+For best results, combine with sender filters or use more specific criteria.
+</Warning>
+
+## Best Practices
+
+<Tip>
+**Follow these guidelines for better filtering:**
+
+1. **Start specific** - Begin with known newsletter senders
+2. **Test first** - Apply filters to existing emails before enabling forwarding
+3. **Refine regularly** - Review what's being forwarded weekly
+4. **Use labels** - Mark forwarded emails in your main inbox for easy tracking
+</Tip>
+
+## Example Filter Combinations
+
+Here are some example filter combinations that work well:
+
+### Gmail Syntax
+
+```
+from:(substack.com OR beehiiv.com OR ghost.io) has:unsubscribe
+```
+
+```
+subject:(newsletter OR digest OR weekly OR daily) has:unsubscribe
+```
+
+```
+from:noreply has:unsubscribe -is:chat
+```
+
+### Outlook Syntax
+
+- **From** contains: `substack.com` OR `beehiiv.com`
+- **Body** contains: `unsubscribe`
+
+### Advanced: List-Id Header (Fastmail/ProtonMail)
+
+The most accurate way to identify newsletters is using the `List-Id` header, which is specifically designed for mailing lists:
+
+```
+List-Id exists
+```
+
+This catches legitimate newsletters while avoiding promotional emails.
+
+## Provider-Specific Tips
+
+<AccordionGroup>
+  <Accordion title="Gmail">
+    - Use the search bar to test filters before creating them
+    - Apply filters to existing emails to see what would be caught
+    - Combine multiple conditions with AND/OR operators
+    - Use `-` (minus) to exclude certain criteria
+  </Accordion>
+
+  <Accordion title="Outlook">
+    - Create multiple simple rules rather than one complex rule
+    - Test rules on existing emails first
+    - Use "Mark as read" to keep your inbox clean
+    - Consider using categories for better organization
+  </Accordion>
+
+  <Accordion title="Fastmail">
+    - Use Sieve filters for maximum flexibility
+    - Check "List-Id" header for most accurate filtering
+    - Use "Send a copy to" instead of "Forward" for better deliverability
+    - Test with "discard" action first to see what would match
+  </Accordion>
+
+  <Accordion title="ProtonMail">
+    - Combine multiple conditions for accuracy
+    - Use "From contains" for newsletter platforms
+    - Test with a single newsletter first
+    - Review forwarded emails regularly to refine rules
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+### Too Many Emails Being Forwarded
+
+If you're forwarding too many non-newsletter emails:
+
+1. **Add more specific conditions** - Use sender domains or subject keywords
+2. **Exclude certain senders** - Add exceptions for transactional emails
+3. **Review forwarded emails** - Check what's being caught and adjust
+4. **Use List-Id** - If your provider supports it (most accurate)
+
+### Missing Newsletters
+
+If newsletters aren't being forwarded:
+
+1. **Check if they match your filter** - Test with the email in question
+2. **Look for the sender domain** - Some newsletters come from unexpected domains
+3. **Check your spam folder** - Filters don't apply to spam
+4. **Verify forwarding is enabled** - Ensure your Summate inbox is verified
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Gmail Setup" icon="google" href="/guides/auto-forwarding/gmail">
+    Apply these filters in Gmail
+  </Card>
+
+  <Card title="Outlook Setup" icon="microsoft" href="/guides/auto-forwarding/outlook">
+    Apply these filters in Outlook
+  </Card>
+
+  <Card title="Fastmail Setup" icon="envelope" href="/guides/auto-forwarding/fastmail">
+    Use Sieve filters in Fastmail
+  </Card>
+
+  <Card title="Back to Overview" icon="arrow-left" href="/guides/auto-forwarding/overview">
+    Return to the main auto-forwarding guide
+  </Card>
+</CardGroup>

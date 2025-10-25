@@ -1,0 +1,58 @@
+---
+title: ProtonMail Auto-Forwarding Setup
+icon: "lock"
+description: Set up selective auto-forwarding from ProtonMail with custom rules
+---
+
+<Info>
+ProtonMail supports selective forwarding with custom rules on **paid plans only**. Free accounts cannot use auto-forwarding.
+</Info>
+
+## Security Note
+
+When forwarding from ProtonMail to non-Proton addresses (like Summate), emails will **not** be end-to-end encrypted. Only the emails matching your forwarding rules are affected.
+
+## Setup Instructions
+
+<Steps>
+  <Step title="Access Forwarding Settings">
+    1. Sign in at [mail.proton.me](https://mail.proton.me)
+    2. Click **Settings (gear icon)** → **All settings**
+    3. Navigate to **Proton Mail** → **Auto-reply and forward**
+    4. Click **Forward emails** → **Add forwarding rule**
+  </Step>
+
+  <Step title="Create Selective Forwarding Rule">
+    1. **Forward from**: Select your Proton address
+    2. **Forward to**: Enter `username@inbox.summate.io`
+    3. Click **Add condition** for selective forwarding:
+       - **From** contains: newsletter domains
+       - **Subject** contains: "newsletter", "digest", "weekly"
+       - Add multiple conditions for accuracy
+    4. Click **Send confirmation email**
+  </Step>
+
+  <Step title="Complete Verification">
+    1. Check your Summate inbox for the verification email
+    2. Click **Accept forwarding** in the email
+    3. Your rule is now active
+
+    Manage rules anytime from **Auto-reply and forward** → **Forward emails**
+  </Step>
+</Steps>
+
+<Tip>
+For advanced filtering, use ProtonMail's **Sieve filters** (Settings → Filters → Add sieve filter) for header-level matching and complex logic.
+</Tip>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Filter Tips" icon="filter" href="/guides/auto-forwarding/filter-tips">
+    Learn smart filtering strategies to forward only newsletters
+  </Card>
+
+  <Card title="Back to Overview" icon="arrow-left" href="/guides/auto-forwarding/overview">
+    Return to the main auto-forwarding guide
+  </Card>
+</CardGroup>
