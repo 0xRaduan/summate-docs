@@ -135,6 +135,26 @@ This guide will walk you through setting up selective auto-forwarding from Gmail
   </Step>
 </Steps>
 
+## Label-Based Forwarding
+
+<Tip>
+**Smart approach:** Instead of creating separate filters for each newsletter sender, you can organize all your newsletters under a single Gmail label, then forward everything with that label to Summate in one filter.
+
+This is particularly useful if you already use labels to organize your newsletters, or prefer to manually review and label emails before forwarding them.
+</Tip>
+
+### How to Forward by Label
+
+1. Go to Gmail Settings > Filters and Blocked Addresses
+2. Click "Create a new filter"
+3. In the "Has the words" field, enter `label:yourlabelname` (replace with your actual label)
+4. Click "Create filter" and check "Forward it to"
+5. Select your Summate inbox address
+
+For nested labels, use the format `label:parent/child`.
+
+**Example:** If you organize newsletters under a label called "Newsletters", create a filter with `label:Newsletters` and forward to your Summate inbox. Any email you label as "Newsletters" will automatically forward to Summate.
+
 ## Next Steps
 
 <CardGroup cols={2}>
